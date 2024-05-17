@@ -73,6 +73,154 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-typescript" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/05/17/typescript/" class="article-date">
+  <time class="dt-published" datetime="2024-05-17T10:44:16.672Z" itemprop="datePublished">2024-05-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h1><p>看似是分享,其实是笔记思密达🥲🥲</p>
+<h4 id="TS是什么"><a href="#TS是什么" class="headerlink" title="TS是什么?"></a>TS是什么?</h4><li>TypeScript 简称：TS，是 JavaScript 的超集。简单来说就是：JS 有的 TS 都有,JS写的代码在TS的环境下都能跑
+<li>在 JS 基础之上，为 JS 添加了类型支持。TypeScript = Type + JavaScript
+<li>TypeScript 是微软开发的开源编程语言，可以在任何运行 JavaScript 的地方运行
+
+
+<h4 id="为什么要为-JS-添加类型支持"><a href="#为什么要为-JS-添加类型支持" class="headerlink" title="为什么要为 JS 添加类型支持?"></a>为什么要为 JS 添加类型支持?</h4><li>废话，当然是因为js有缺陷
+1. JS 的类型系统是弱类型的，没有类型的概念
+2. JavaScript 属于<b>动态类型的编程语言</b>，边解释边执行，错误只能在<b>运行阶段</b>才能发现
+
+<li>TS属于<b>静态类型的编程语言</b>
+1. 它要先编译(ts-node)，再执行  不能直接执行，需要编译成js才能执行
+2. 它会在编译期间做类型检查，可以提前到在<b>编写代码的同时就发现代码中的类型错误</b>
+
+
+<h3 id="TS语法"><a href="#TS语法" class="headerlink" title="TS语法"></a>TS语法</h3><h4 id="类型注解"><a href="#类型注解" class="headerlink" title="类型注解"></a>类型注解</h4><p>————变量的注释，为变量添加约束</p>
+<p><br>TS提供了JS的所有功能，并额外增加了：<b>类型系统</b></p>
+<p><br><li>TS中定义变量(常量)可以指定类型</p>
+<li>A类型的变量不能保存B类型的数据
+
+<p><br>———<u>可以标记代码的意外行为，减少错误</u><br><br></p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">age</span>: <span class="built_in">number</span> = <span class="number">18</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="类型推论"><a href="#类型推论" class="headerlink" title="类型推论"></a>类型推论</h4><p>在 TS 中，某些没有明确指定类型的情况下，<b>TS 的类型推论机制会自动提供类型</b></p>
+<p><br>常见场景：</p>
+<ol>
+<li>声明变量并初始化时</li>
+<li>决定函数返回值时</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 变量 age 的类型被自动推断为：number</span></span><br><span class="line"><span class="keyword">let</span> age = <span class="number">18</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数返回值的类型被自动推断为：number</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">num1: <span class="built_in">number</span>, num2: <span class="built_in">number</span></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> num1 + num2</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h4><p>ts的基础类型分为两类</p>
+<li>1.js原有类型
+<br>原始类型
+<br>
+<br>
+
+ <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">age</span>: <span class="built_in">number</span> = <span class="number">18</span></span><br><span class="line"><span class="keyword">let</span> <span class="title class_">Name</span>: <span class="built_in">string</span> = <span class="string">&#x27;xiaoyubuchiyu&#x27;</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="literal">null</span> = <span class="literal">null</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">b</span>: <span class="literal">undefined</span> = <span class="literal">undefined</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">s</span>: <span class="built_in">symbol</span> = <span class="title class_">Symbol</span>()</span><br><span class="line"><span class="keyword">let</span> <span class="attr">bo</span>:<span class="built_in">boolean</span> = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>对象类型—(一个单词概括🤗🤗🤗)<br>object(数组&#x2F;对象&#x2F;函数)<br><br></p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">number</span>: <span class="built_in">number</span>[]=[<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="keyword">let</span> <span class="attr">number</span>:<span class="title class_">Array</span>&lt;<span class="built_in">number</span>&gt;=[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">let</span> <span class="keyword">function</span>(<span class="params">a:<span class="built_in">string</span> b:<span class="built_in">number</span></span>):<span class="built_in">string</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><li>2.ts新增类型😴😴😴<br>联合类型  自定义类型(类型别名)  接口  元组  字面量类型  枚举  void  any  好多好多好多好多</p>
+<p><br><b>挑一些常用的讲讲</b>🤗🤗🤗</p>
+<p><br><li><b>1. 联合类型:</b><br>可以定义一个变量,使其可以是多种类型,不限制于一种,类似于逻辑运算符 || , 但是ts只有一根竖线<br><br></p>
+ <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> 变量: 类型<span class="number">1</span> | 类型<span class="number">2</span> | 类型<span class="number">3</span> .... = 初始值</span><br><span class="line"><span class="keyword">let</span> <span class="attr">arr</span>: (<span class="built_in">number</span> | <span class="built_in">string</span>)[] = [<span class="number">1</span>, <span class="string">&#x27;a&#x27;</span>, <span class="number">3</span>, <span class="string">&#x27;b&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p><br><li><b>2. 类型别名</b><br>字面意思,给(复杂)类型起个别名,自己定义一个类型<br><br></p>
+ <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> 别名 = 类型</span><br><span class="line"></span><br><span class="line"><span class="comment">// type NewType = string | number</span></span><br><span class="line"><span class="comment">// let a: NewType = 1</span></span><br><span class="line"><span class="comment">// let b: NewType = &#x27;1&#x27;</span></span><br><span class="line"><span class="comment">// let arr: NewType[] = [1, &#x27;1&#x27;]</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">type</span> <span class="title class_">MyArr</span> = (<span class="built_in">number</span> | <span class="built_in">string</span>) []</span><br><span class="line"><span class="keyword">const</span> <span class="attr">arr</span>:<span class="title class_">MyArr</span> = [<span class="number">1</span>, <span class="string">&#x27;1&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p> <br><li><b>3. 函数</b><br> 函数的类型指的是<u>函数参数和返回值</u>的类型<br> <br></p>
+ <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 普通函数</span></span><br><span class="line"><span class="keyword">function</span> 函数名(形参<span class="number">1</span>： 类型=默认值， 形参<span class="number">2</span>：类型=默认值): 返回值类型 &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数</span></span><br><span class="line"><span class="keyword">const</span> 函数名（形参<span class="number">1</span>： 类型=默认值， 形参<span class="number">2</span>：类型=默认值):返回值类型 =&gt; &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<p><br>当函数参数和返回值都是同一个类型的时候,这样写就有点累累,所有就有了一个又伟大又鸡肋的方法,<b>把函数当成一个整体or自定义其类型</b><br><br></p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 把函数当一个整体</span></span><br><span class="line"><span class="keyword">const</span> add1 : <span class="function">(<span class="params">n1:<span class="built_in">number</span>,n2:<span class="built_in">number</span></span>)=&gt;</span><span class="built_in">number</span>  =  <span class="function">(<span class="params">a,b</span>)=&gt;</span>&#123;<span class="keyword">return</span> a+b &#125;</span><br><span class="line"><span class="comment">// 自定义函数类型</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Fn</span> = <span class="function">(<span class="params">n1:<span class="built_in">number</span>,n2:<span class="built_in">number</span></span>) =&gt;</span><span class="built_in">number</span> </span><br><span class="line"><span class="keyword">const</span> add1 : <span class="title class_">Fn</span> = <span class="function">(<span class="params">a,b</span>)=&gt;</span>&#123;<span class="keyword">return</span> a+b &#125;</span><br></pre></td></tr></table></figure>
+
+<p>感觉不如老老实实写每一个类型呢(小声bb)🥲🥲</p>
+<p>另外,当一个变量需要设置为<u>可选</u>的时,就在变量名后面加一个 ? ,并且,<u>可选参数必须放在必选参数的后面</u><br><br><li><b>4. void类型 and void和underfine的区别</b><br><br> 当函数没有返回值时,返回类型就是:void<br>一般有三种情况:</p>
+<li> 不写return
+<li> 写return,但是后面没内容
+<li> 写return  underfined
+<br>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果什么都不写，此时，add 函数的返回值类型为： void</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">add</span> = (<span class="params"></span>) =&gt; &#123;&#125;</span><br><span class="line"><span class="comment">// 这种写法是明确指定函数返回值类型为 void，与上面不指定返回值类型相同</span></span><br><span class="line"><span class="keyword">const</span> add = (): <span class="function"><span class="params">void</span> =&gt;</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 但，如果指定 返回值类型为 undefined，此时，函数体中必须显示的 return undefined 才可以</span></span><br><span class="line"><span class="keyword">const</span> add = (): <span class="function"><span class="params">undefined</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 此处，返回的 undefined 是 JS 中的一个值</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">undefined</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><b>void和underfined有什么区别?</b><br>void:</p>
+<li>void 类型是所有类型的子类型,说明任何类型的值都可以赋值给 void 类型的变量
+<li>void 类型通常用作函数返回类型，表示函数不返回任何值（即没有返回值）
+<li> 除了 undefined 和 null，你不能直接赋值任何其他值给 void 类型的变量
+underfined:
+<li>undefined 是 JavaScript 中的一个特殊类型，表示变量已声明但尚未赋值
+<li>undefined 是 void 类型的一个具体值,因此，可以将 undefined 赋值给 void 类型的变量，但不能倒反天罡
+
+<p><br>5. 对象类型–类型别名&#x2F;接口&#x2F;继承</p>
+<p>对象类型的<b>类型别名</b>跟前面的几乎一模一样,也是用到type关键字创建,就不写了</p>
+<p>当一个对象被多次使用时,除了用类型别名type,还可以用<b>接口</b> interface 关键字,声明接口后,就直接用接口名称作为变量类型<br><br></p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> 接口名  &#123;</span><br><span class="line">    属性<span class="number">1</span>: 类型<span class="number">1</span>, 属性<span class="number">2</span>: 类型<span class="number">2</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// eg</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IGoodItem</span>  &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="built_in">string</span>, <span class="attr">price</span>: <span class="built_in">number</span>, <span class="attr">func</span>: <span class="function">()=&gt;</span><span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="attr">good1</span>: <span class="title class_">IGoodItem</span> = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;手表&#x27;</span>,</span><br><span class="line">    <span class="attr">price</span>: <span class="number">200</span>,</span><br><span class="line">    <span class="attr">func</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;看时间&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><b>那接口和类型别名有什么区别?</b></p>
+<li>同:都可以给对象指定类型
+<li>异:正如前面提到的type还可以用来给普通的类型指定别名,但是接口只能为对象指定类型
+
+<p>ok,对象复用解决了,那属性复用呢?<br>当然是<b>接口继承</b></p>
+<p>继承的时候,可以把复用的属性抽离出来,重新用接口定义一个,然后通过继承 extends 来实现复用,继承过后,继承后，Point3D 就有了 Point2D 的所有属性和方法(此时，Point3D 同时有 x、y、z 三个属性)</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Point2D</span> &#123; <span class="attr">x</span>: <span class="built_in">number</span>; <span class="attr">y</span>: <span class="built_in">number</span> &#125;</span><br><span class="line"><span class="comment">// 继承 Point2D</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Point3D</span> <span class="keyword">extends</span> <span class="title class_">Point2D</span> &#123;</span><br><span class="line">  <span class="attr">z</span>: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其他类型就不说了,然后再看看<b>泛型</b></p>
+<h4 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h4><p>泛型的特点是,传入什么类型的数据就传出什么类型的的数据–参数和返回值类型相同<br><br>异常的熟悉啊,上面函数定义的时候就是这样,要不怎么说上面那个不行呢😈😈<br><br>例如：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params">value: <span class="built_in">number</span></span>): <span class="built_in">number</span> &#123; <span class="keyword">return</span> value &#125;</span><br></pre></td></tr></table></figure>
+
+<p><br>比如，fn(10) 调用以上函数就会直接返回 10 本身<br>但是，该函数声明只接收数值类型，无法用于其他类型,那如果换成any可以吗?<br>好吧,其实不行,换成any就没有了类型保护，也没有严格限制返回值的类型和输入值的类型一致<br><br>ok 搬出伟大的泛型🍡🍡<br><br>泛型，顾名思义，就是可以适用于多个类型，使用类型变量比如T帮助我们捕获传入的类型，之后我们就可以继续使用这个类型啦</p>
+<p><br>它本质是参数化类型，通俗的将就是所操作的数据类型被指定为一个参数，这种参数类型可以用在类、接口和函数的创建中，分别成为<b>泛型类，泛型接口、泛型函数</b><br><br></p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> fn&lt;T&gt;(<span class="attr">value</span>: T): T &#123; <span class="keyword">return</span> value &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> num = fn&lt;<span class="built_in">number</span>&gt;(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">const</span> str = fn&lt;<span class="built_in">string</span>&gt;(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><br>语法：在函数名称后面de &lt;&gt;，中添加类型变量，比如此处的 T</p>
+<li>类型变量 T，是一种特殊类型的变量，它处理类型而不是值
+<li>该类型变量相当于一个类型容器，能够捕获用户提供的类型(具体是什么类型由用户调用该函数时指定)
+<li>因为 Type 是类型，因此可以将其作为函数参数和返回值的类型，表示参数和返回值具有相同的类型
+<li>类型变量 Type，可以是任意合法的变量名称
+
+
+<p><br>然后,在使用泛型函数时,<b>可以省略 &lt;类型&gt; 来简化泛型函数的调用</b></p>
+<li>此时，TS 内部会采用一种叫做类型参数推断的机制，来根据传入的实参自动推断出类型变量 Type 的类型
+<li>比如，传入实参 10，TS 会自动推断出变量 num 的类型 number，并作为 Type 的类型
+<li>推荐：使用这种简化的方式调用泛型函数，使代码更短，更易于阅读
+<li>说明：当编译器无法推断类型或者推断的类型不准确时，就需要显式地传入类型参数
+
+<p><b><br>泛型约束</b><br>默认情况下，泛型函数的类型变量 T 可以代表多个类型，这导致无法访问任何属性</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> fn&lt;T&gt;(<span class="attr">value</span>: T): T &#123;</span><br><span class="line">  <span class="comment">// 这里value. 不会有提示</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(value.<span class="property">length</span>)<span class="comment">// 这里会报错</span></span><br><span class="line">  <span class="keyword">return</span> value</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">fn</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<li>比如，fn(‘a’) 调用函数时获取参数的长度：
+<li>Type 可以代表任意类型，无法保证一定存在 length 属性，比如 number 类型就没有 length
+<li>此时，就需要为泛型添加约束来收缩类型(缩窄类型取值范围)
+
+<p><br><b>好,那怎么添加约束?</b></p>
+<ol>
+<li>指定更具体的类型</li>
+<li>添加约束</li>
+</ol>
+<p>比如，要求传入T类型必须要有length属性</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个接口</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">ILength</span> &#123; <span class="attr">length</span>: <span class="built_in">number</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// T extends ILength 添加泛型约束</span></span><br><span class="line"><span class="keyword">function</span> fn&lt;T <span class="keyword">extends</span> <span class="title class_">ILength</span>&gt;(<span class="attr">value</span>: T): T &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(value.<span class="property">length</span>)</span><br><span class="line">  <span class="keyword">return</span> value</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">fn</span>(<span class="string">&#x27;abc&#x27;</span>) <span class="comment">// Ok</span></span><br><span class="line"><span class="title function_">fn</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]) <span class="comment">// Ok</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/05/17/typescript/" data-id="clwajkk740000b44hdq6oc585" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-websoket" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/05/17/websoket/" class="article-date">
@@ -140,162 +288,6 @@
     </div>
     <footer class="article-footer">
       <a data-url="http://example.com/2024/05/17/websoket/" data-id="clwajkk790001b44h37vr5u78" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-typescript" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/05/17/typescript/" class="article-date">
-  <time class="dt-published" datetime="2024-05-17T10:32:19.070Z" itemprop="datePublished">2024-05-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h1><p>看似是分享,其实是笔记思密达🥲🥲</p>
-<h4 id="TS是什么"><a href="#TS是什么" class="headerlink" title="TS是什么?"></a>TS是什么?</h4><li>TypeScript 简称：TS，是 JavaScript 的超集。简单来说就是：JS 有的 TS 都有,JS写的代码在TS的环境下都能跑
-<li>在 JS 基础之上，为 JS 添加了类型支持。TypeScript = Type + JavaScript
-<li>TypeScript 是微软开发的开源编程语言，可以在任何运行 JavaScript 的地方运行
-<br>————————————————
-
-<h4 id="为什么要为-JS-添加类型支持"><a href="#为什么要为-JS-添加类型支持" class="headerlink" title="为什么要为 JS 添加类型支持?"></a>为什么要为 JS 添加类型支持?</h4><li>废话，当然是因为js有缺陷
-1. JS 的类型系统是弱类型的，没有类型的概念
-2. JavaScript 属于<b>动态类型的编程语言</b>，边解释边执行，错误只能在<b>运行阶段</b>才能发现
-
-<li>TS属于<b>静态类型的编程语言</b>
-1. 它要先编译(ts-node)，再执行  不能直接执行，需要编译成js才能执行
-2. 它会在编译期间做类型检查，可以提前到在<b>编写代码的同时就发现代码中的类型错误</b>
-<br>————————————————
-
-<h3 id="TS语法"><a href="#TS语法" class="headerlink" title="TS语法"></a>TS语法</h3><h4 id="类型注解"><a href="#类型注解" class="headerlink" title="类型注解"></a>类型注解</h4><p>————变量的注释，为变量添加约束</p>
-<p><br>TS提供了JS的所有功能，并额外增加了：<b>类型系统</b></p>
-<p><br><li>TS中定义变量(常量)可以指定类型</p>
-<li>A类型的变量不能保存B类型的数据
-
-<p><br>———<u>可以标记代码的意外行为，减少错误</u><br><br></p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">age</span>: <span class="built_in">number</span> = <span class="number">18</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="类型推论"><a href="#类型推论" class="headerlink" title="类型推论"></a>类型推论</h4><p>在 TS 中，某些没有明确指定类型的情况下，<b>TS 的类型推论机制会自动提供类型</b></p>
-<p><br>常见场景：</p>
-<ol>
-<li>声明变量并初始化时</li>
-<li>决定函数返回值时</li>
-</ol>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 变量 age 的类型被自动推断为：number</span></span><br><span class="line"><span class="keyword">let</span> age = <span class="number">18</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数返回值的类型被自动推断为：number</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">num1: <span class="built_in">number</span>, num2: <span class="built_in">number</span></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> num1 + num2</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h4><p>ts的基础类型分为两类</p>
-<li>1.js原有类型
-<br>原始类型
-<br>
-
- <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">age</span>: <span class="built_in">number</span> = <span class="number">18</span></span><br><span class="line"><span class="keyword">let</span> <span class="title class_">Name</span>: <span class="built_in">string</span> = <span class="string">&#x27;xiaoyubuchiyu&#x27;</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="literal">null</span> = <span class="literal">null</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">b</span>: <span class="literal">undefined</span> = <span class="literal">undefined</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">s</span>: <span class="built_in">symbol</span> = <span class="title class_">Symbol</span>()</span><br><span class="line"><span class="keyword">let</span> <span class="attr">bo</span>:<span class="built_in">boolean</span> = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>对象类型—(一个单词概括🤗🤗🤗)<br>object(数组&#x2F;对象&#x2F;函数)<br><br></p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">number</span>: <span class="built_in">number</span>[]=[<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="keyword">let</span> <span class="attr">number</span>:<span class="title class_">Array</span>&lt;<span class="built_in">number</span>&gt;=[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">let</span> <span class="keyword">function</span>(<span class="params">a:<span class="built_in">string</span> b:<span class="built_in">number</span></span>):<span class="built_in">string</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><br><li>2.ts新增类型😴😴😴<br>联合类型  自定义类型(类型别名)  接口  元组  字面量类型  枚举  void  any  好多好多好多好多</p>
-<p><br><b>挑一些常用的讲讲</b>🤗🤗🤗</p>
-<p><br><li><b>1. 联合类型:</b><br>可以定义一个变量,使其可以是多种类型,不限制于一种,类似于逻辑运算符 || , 但是ts只有一根竖线<br><br></p>
- <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> 变量: 类型<span class="number">1</span> | 类型<span class="number">2</span> | 类型<span class="number">3</span> .... = 初始值</span><br><span class="line"><span class="keyword">let</span> <span class="attr">arr</span>: (<span class="built_in">number</span> | <span class="built_in">string</span>)[] = [<span class="number">1</span>, <span class="string">&#x27;a&#x27;</span>, <span class="number">3</span>, <span class="string">&#x27;b&#x27;</span>]</span><br></pre></td></tr></table></figure>
-
-<p><br><li><b>2. 类型别名</b><br><br>字面意思,给(复杂)类型起个别名,自己定义一个类型</p>
- <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> 别名 = 类型</span><br><span class="line"></span><br><span class="line"><span class="comment">// type NewType = string | number</span></span><br><span class="line"><span class="comment">// let a: NewType = 1</span></span><br><span class="line"><span class="comment">// let b: NewType = &#x27;1&#x27;</span></span><br><span class="line"><span class="comment">// let arr: NewType[] = [1, &#x27;1&#x27;]</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">type</span> <span class="title class_">MyArr</span> = (<span class="built_in">number</span> | <span class="built_in">string</span>) []</span><br><span class="line"><span class="keyword">const</span> <span class="attr">arr</span>:<span class="title class_">MyArr</span> = [<span class="number">1</span>, <span class="string">&#x27;1&#x27;</span>]</span><br></pre></td></tr></table></figure>
-
-<p> <br><li><b>3. 函数</b><br> <br>函数的类型指的是<u>函数参数和返回值</u>的类型</p>
- <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 普通函数</span></span><br><span class="line"><span class="keyword">function</span> 函数名(形参<span class="number">1</span>： 类型=默认值， 形参<span class="number">2</span>：类型=默认值): 返回值类型 &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数</span></span><br><span class="line"><span class="keyword">const</span> 函数名（形参<span class="number">1</span>： 类型=默认值， 形参<span class="number">2</span>：类型=默认值):返回值类型 =&gt; &#123; &#125;</span><br></pre></td></tr></table></figure>
-
-<p>当函数参数和返回值都是同一个类型的时候,这样写就有点累累,所有就有了一个又伟大又鸡肋的方法,<b>把函数当成一个整体or自定义其类型</b></p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 把函数当一个整体</span></span><br><span class="line"><span class="keyword">const</span> add1 : <span class="function">(<span class="params">n1:<span class="built_in">number</span>,n2:<span class="built_in">number</span></span>)=&gt;</span><span class="built_in">number</span>  =  <span class="function">(<span class="params">a,b</span>)=&gt;</span>&#123;<span class="keyword">return</span> a+b &#125;</span><br><span class="line"><span class="comment">// 自定义函数类型</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Fn</span> = <span class="function">(<span class="params">n1:<span class="built_in">number</span>,n2:<span class="built_in">number</span></span>) =&gt;</span><span class="built_in">number</span> </span><br><span class="line"><span class="keyword">const</span> add1 : <span class="title class_">Fn</span> = <span class="function">(<span class="params">a,b</span>)=&gt;</span>&#123;<span class="keyword">return</span> a+b &#125;</span><br></pre></td></tr></table></figure>
-
-<p><br>感觉不如老老实实写每一个类型呢(小声bb)🥲🥲</p>
-<p><br>另外,当一个变量需要设置为<u>可选</u>的时,就在变量名后面加一个 ? ,并且,<u>可选参数必须放在必选参数的后面</u></p>
-<p><br><li><b>4. void类型 and void和underfine的区别</b><br><br> 当函数没有返回值时,返回类型就是:void<br><br>一般有三种情况:</p>
-<li> 不写return
-<li> 写return,但是后面没内容
-<li> 写return  underfined
-<br>
-
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果什么都不写，此时，add 函数的返回值类型为： void</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">add</span> = (<span class="params"></span>) =&gt; &#123;&#125;</span><br><span class="line"><span class="comment">// 这种写法是明确指定函数返回值类型为 void，与上面不指定返回值类型相同</span></span><br><span class="line"><span class="keyword">const</span> add = (): <span class="function"><span class="params">void</span> =&gt;</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 但，如果指定 返回值类型为 undefined，此时，函数体中必须显示的 return undefined 才可以</span></span><br><span class="line"><span class="keyword">const</span> add = (): <span class="function"><span class="params">undefined</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 此处，返回的 undefined 是 JS 中的一个值</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">undefined</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><b>void和underfined有什么区别?</b><br>void:</p>
-<li>void 类型是所有类型的子类型,说明任何类型的值都可以赋值给 void 类型的变量
-<li>void 类型通常用作函数返回类型，表示函数不返回任何值（即没有返回值）
-<li> 除了 undefined 和 null，你不能直接赋值任何其他值给 void 类型的变量
-underfined:
-<li>undefined 是 JavaScript 中的一个特殊类型，表示变量已声明但尚未赋值
-<li>undefined 是 void 类型的一个具体值,因此，可以将 undefined 赋值给 void 类型的变量，但不能倒反天罡
-
-<p><br>5. 对象类型–类型别名&#x2F;接口&#x2F;继承</p>
-<p><br>对象类型的<b>类型别名</b>跟前面的几乎一模一样,也是用到type关键字创建,就不写了</p>
-<p><br>当一个对象被多次使用时,除了用类型别名type,还可以用<b>接口</b> interface 关键字,声明接口后,就直接用接口名称作为变量类型<br><br></p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> 接口名  &#123;</span><br><span class="line">    属性<span class="number">1</span>: 类型<span class="number">1</span>, 属性<span class="number">2</span>: 类型<span class="number">2</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// eg</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IGoodItem</span>  &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="built_in">string</span>, <span class="attr">price</span>: <span class="built_in">number</span>, <span class="attr">func</span>: <span class="function">()=&gt;</span><span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="attr">good1</span>: <span class="title class_">IGoodItem</span> = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;手表&#x27;</span>,</span><br><span class="line">    <span class="attr">price</span>: <span class="number">200</span>,</span><br><span class="line">    <span class="attr">func</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;看时间&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><br><b>那接口和类型别名有什么区别?</b></p>
-<li>同:都可以给对象指定类型
-<li>异:正如前面提到的type还可以用来给普通的类型指定别名,但是接口只能为对象指定类型
-
-<p>ok,对象复用解决了,那属性复用呢?<br>————<b>接口继承</b></p>
-<p><br>继承的时候,可以把复用的属性抽离出来,重新用接口定义一个,然后通过继承 extends 来实现复用,继承过后,继承后，Point3D 就有了 Point2D 的所有属性和方法(此时，Point3D 同时有 x、y、z 三个属性)</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Point2D</span> &#123; <span class="attr">x</span>: <span class="built_in">number</span>; <span class="attr">y</span>: <span class="built_in">number</span> &#125;</span><br><span class="line"><span class="comment">// 继承 Point2D</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Point3D</span> <span class="keyword">extends</span> <span class="title class_">Point2D</span> &#123;</span><br><span class="line">  <span class="attr">z</span>: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><br>其他类型就不说了,然后再看看<b>泛型</b></p>
-<p><br>————————————————</p>
-<h4 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h4><p><br>泛型的特点是,传入什么类型的数据就传出什么类型的的数据–参数和返回值类型相同</p>
-<p><br>异常的熟悉啊,上面函数定义的时候就是这样,要不怎么说上面那个不行呢😈😈</p>
-<p><br>例如：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params">value: <span class="built_in">number</span></span>): <span class="built_in">number</span> &#123; <span class="keyword">return</span> value &#125;</span><br></pre></td></tr></table></figure>
-
-<p><br>比如，fn(10) 调用以上函数就会直接返回 10 本身<br>但是，该函数声明只接收数值类型，无法用于其他类型,那如果换成any可以吗?<br>好吧,其实不行,换成any就没有了类型保护，也没有严格限制返回值的类型和输入值的类型一致</p>
-<p><br>ok 搬出伟大的泛型🍡🍡</p>
-<p><br>泛型，顾名思义，就是可以适用于多个类型，使用类型变量比如T帮助我们捕获传入的类型，之后我们就可以继续使用这个类型啦</p>
-<p><br>它本质是参数化类型，通俗的将就是所操作的数据类型被指定为一个参数，这种参数类型可以用在类、接口和函数的创建中，分别成为<b>泛型类，泛型接口、泛型函数</b></p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> fn&lt;T&gt;(<span class="attr">value</span>: T): T &#123; <span class="keyword">return</span> value &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> num = fn&lt;<span class="built_in">number</span>&gt;(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">const</span> str = fn&lt;<span class="built_in">string</span>&gt;(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><br>语法：在函数名称后面de &lt;&gt;，中添加类型变量，比如此处的 T</p>
-<li>类型变量 T，是一种特殊类型的变量，它处理类型而不是值
-<li>该类型变量相当于一个类型容器，能够捕获用户提供的类型(具体是什么类型由用户调用该函数时指定)
-<li>因为 Type 是类型，因此可以将其作为函数参数和返回值的类型，表示参数和返回值具有相同的类型
-<li>类型变量 Type，可以是任意合法的变量名称
-
-
-<p><br>然后,在使用泛型函数时,<b>可以省略 &lt;类型&gt; 来简化泛型函数的调用</b></p>
-<li>此时，TS 内部会采用一种叫做类型参数推断的机制，来根据传入的实参自动推断出类型变量 Type 的类型
-<li>比如，传入实参 10，TS 会自动推断出变量 num 的类型 number，并作为 Type 的类型
-<li>推荐：使用这种简化的方式调用泛型函数，使代码更短，更易于阅读
-<li>说明：当编译器无法推断类型或者推断的类型不准确时，就需要显式地传入类型参数
-
-<p><br>————————————————</p>
-<p><b><br>泛型约束</b><br><br>默认情况下，泛型函数的类型变量 T 可以代表多个类型，这导致无法访问任何属性</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> fn&lt;T&gt;(<span class="attr">value</span>: T): T &#123;</span><br><span class="line">  <span class="comment">// 这里value. 不会有提示</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(value.<span class="property">length</span>)<span class="comment">// 这里会报错</span></span><br><span class="line">  <span class="keyword">return</span> value</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">fn</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><br><li>比如，fn(‘a’) 调用函数时获取参数的长度：</p>
-<li>Type 可以代表任意类型，无法保证一定存在 length 属性，比如 number 类型就没有 length
-<li>此时，就需要为泛型添加约束来收缩类型(缩窄类型取值范围)
-
-<p><br>好,那怎么添加约束?</p>
-<ol>
-<li>指定更具体的类型</li>
-<li>添加约束</li>
-</ol>
-<p><br>比如，要求传入T类型必须要有length属性</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个接口</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">ILength</span> &#123; <span class="attr">length</span>: <span class="built_in">number</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// T extends ILength 添加泛型约束</span></span><br><span class="line"><span class="keyword">function</span> fn&lt;T <span class="keyword">extends</span> <span class="title class_">ILength</span>&gt;(<span class="attr">value</span>: T): T &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(value.<span class="property">length</span>)</span><br><span class="line">  <span class="keyword">return</span> value</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">fn</span>(<span class="string">&#x27;abc&#x27;</span>) <span class="comment">// Ok</span></span><br><span class="line"><span class="title function_">fn</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]) <span class="comment">// Ok</span></span><br></pre></td></tr></table></figure>
-
-<p><br>————————————————</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/05/17/typescript/" data-id="clwajkk740000b44hdq6oc585" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -621,11 +613,11 @@ underfined:
       <ul>
         
           <li>
-            <a href="/2024/05/17/websoket/">(no title)</a>
+            <a href="/2024/05/17/typescript/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2024/05/17/typescript/">(no title)</a>
+            <a href="/2024/05/17/websoket/">(no title)</a>
           </li>
         
           <li>
