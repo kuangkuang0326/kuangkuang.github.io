@@ -73,10 +73,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Typescript" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-typescript" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/05/17/Typescript/" class="article-date">
-  <time class="dt-published" datetime="2024-05-17T10:46:44.408Z" itemprop="datePublished">2024-05-17</time>
+    <a href="/2024/05/17/typescript/" class="article-date">
+  <time class="dt-published" datetime="2024-05-17T10:50:44.545Z" itemprop="datePublished">2024-05-17</time>
 </a>
     
   </div>
@@ -101,15 +101,15 @@
 
 
 <h3 id="TS语法"><a href="#TS语法" class="headerlink" title="TS语法"></a>TS语法</h3><h4 id="类型注解"><a href="#类型注解" class="headerlink" title="类型注解"></a>类型注解</h4><p>————变量的注释，为变量添加约束</p>
-<p><br>TS提供了JS的所有功能，并额外增加了：<b>类型系统</b></p>
-<p><br><li>TS中定义变量(常量)可以指定类型</p>
+<p>TS提供了JS的所有功能，并额外增加了：<b>类型系统</b></p>
+<li>TS中定义变量(常量)可以指定类型
 <li>A类型的变量不能保存B类型的数据
 
-<p><br>———<u>可以标记代码的意外行为，减少错误</u><br><br></p>
+<p>———<u>可以标记代码的意外行为，减少错误</u><br><br></p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">age</span>: <span class="built_in">number</span> = <span class="number">18</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="类型推论"><a href="#类型推论" class="headerlink" title="类型推论"></a>类型推论</h4><p>在 TS 中，某些没有明确指定类型的情况下，<b>TS 的类型推论机制会自动提供类型</b></p>
-<p><br>常见场景：</p>
+<p>常见场景：</p>
 <ol>
 <li>声明变量并初始化时</li>
 <li>决定函数返回值时</li>
@@ -118,8 +118,7 @@
 
 <h4 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h4><p>ts的基础类型分为两类</p>
 <li>1.js原有类型
-<br>原始类型
-<br>
+原始类型
 <br>
 
  <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">age</span>: <span class="built_in">number</span> = <span class="number">18</span></span><br><span class="line"><span class="keyword">let</span> <span class="title class_">Name</span>: <span class="built_in">string</span> = <span class="string">&#x27;xiaoyubuchiyu&#x27;</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="literal">null</span> = <span class="literal">null</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">b</span>: <span class="literal">undefined</span> = <span class="literal">undefined</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">s</span>: <span class="built_in">symbol</span> = <span class="title class_">Symbol</span>()</span><br><span class="line"><span class="keyword">let</span> <span class="attr">bo</span>:<span class="built_in">boolean</span> = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
@@ -127,21 +126,27 @@
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">number</span>: <span class="built_in">number</span>[]=[<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="keyword">let</span> <span class="attr">number</span>:<span class="title class_">Array</span>&lt;<span class="built_in">number</span>&gt;=[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">let</span> <span class="keyword">function</span>(<span class="params">a:<span class="built_in">string</span> b:<span class="built_in">number</span></span>):<span class="built_in">string</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><br><li>2.ts新增类型😴😴😴<br>联合类型  自定义类型(类型别名)  接口  元组  字面量类型  枚举  void  any  好多好多好多好多</p>
-<p><br><b>挑一些常用的讲讲</b>🤗🤗🤗</p>
-<p><br><li><b>1. 联合类型:</b><br>可以定义一个变量,使其可以是多种类型,不限制于一种,类似于逻辑运算符 || , 但是ts只有一根竖线<br><br></p>
+<p><b>挑一些常用的讲讲</b>🤗🤗🤗</p>
+<li><b>1. 联合类型:</b>
+可以定义一个变量,使其可以是多种类型,不限制于一种,类似于逻辑运算符 || , 但是ts只有一根竖线
+<br>
+
  <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> 变量: 类型<span class="number">1</span> | 类型<span class="number">2</span> | 类型<span class="number">3</span> .... = 初始值</span><br><span class="line"><span class="keyword">let</span> <span class="attr">arr</span>: (<span class="built_in">number</span> | <span class="built_in">string</span>)[] = [<span class="number">1</span>, <span class="string">&#x27;a&#x27;</span>, <span class="number">3</span>, <span class="string">&#x27;b&#x27;</span>]</span><br></pre></td></tr></table></figure>
 
-<p><br><li><b>2. 类型别名</b><br>字面意思,给(复杂)类型起个别名,自己定义一个类型<br><br></p>
+<p><br><li><b>2. 类型别名</b><br>字面意思,给(复杂)类型起个别名,自己定义一个类型</p>
  <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> 别名 = 类型</span><br><span class="line"></span><br><span class="line"><span class="comment">// type NewType = string | number</span></span><br><span class="line"><span class="comment">// let a: NewType = 1</span></span><br><span class="line"><span class="comment">// let b: NewType = &#x27;1&#x27;</span></span><br><span class="line"><span class="comment">// let arr: NewType[] = [1, &#x27;1&#x27;]</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">type</span> <span class="title class_">MyArr</span> = (<span class="built_in">number</span> | <span class="built_in">string</span>) []</span><br><span class="line"><span class="keyword">const</span> <span class="attr">arr</span>:<span class="title class_">MyArr</span> = [<span class="number">1</span>, <span class="string">&#x27;1&#x27;</span>]</span><br></pre></td></tr></table></figure>
 
-<p> <br><li><b>3. 函数</b><br> 函数的类型指的是<u>函数参数和返回值</u>的类型<br> <br></p>
+<p> <br><li><b>3. 函数</b><br> 函数的类型指的是<u>函数参数和返回值</u>的类型</p>
  <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 普通函数</span></span><br><span class="line"><span class="keyword">function</span> 函数名(形参<span class="number">1</span>： 类型=默认值， 形参<span class="number">2</span>：类型=默认值): 返回值类型 &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数</span></span><br><span class="line"><span class="keyword">const</span> 函数名（形参<span class="number">1</span>： 类型=默认值， 形参<span class="number">2</span>：类型=默认值):返回值类型 =&gt; &#123; &#125;</span><br></pre></td></tr></table></figure>
 
 <p><br>当函数参数和返回值都是同一个类型的时候,这样写就有点累累,所有就有了一个又伟大又鸡肋的方法,<b>把函数当成一个整体or自定义其类型</b><br><br></p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 把函数当一个整体</span></span><br><span class="line"><span class="keyword">const</span> add1 : <span class="function">(<span class="params">n1:<span class="built_in">number</span>,n2:<span class="built_in">number</span></span>)=&gt;</span><span class="built_in">number</span>  =  <span class="function">(<span class="params">a,b</span>)=&gt;</span>&#123;<span class="keyword">return</span> a+b &#125;</span><br><span class="line"><span class="comment">// 自定义函数类型</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Fn</span> = <span class="function">(<span class="params">n1:<span class="built_in">number</span>,n2:<span class="built_in">number</span></span>) =&gt;</span><span class="built_in">number</span> </span><br><span class="line"><span class="keyword">const</span> add1 : <span class="title class_">Fn</span> = <span class="function">(<span class="params">a,b</span>)=&gt;</span>&#123;<span class="keyword">return</span> a+b &#125;</span><br></pre></td></tr></table></figure>
 
 <p>感觉不如老老实实写每一个类型呢(小声bb)🥲🥲</p>
-<p>另外,当一个变量需要设置为<u>可选</u>的时,就在变量名后面加一个 ? ,并且,<u>可选参数必须放在必选参数的后面</u><br><br><li><b>4. void类型 and void和underfine的区别</b><br><br> 当函数没有返回值时,返回类型就是:void<br>一般有三种情况:</p>
+<p>另外,当一个变量需要设置为<u>可选</u>的时,就在变量名后面加一个 ? ,并且,<u>可选参数必须放在必选参数的后面</u></p>
+<li><b>4. void类型 and void和underfine的区别</b>
+<br> 当函数没有返回值时,返回类型就是:void
+一般有三种情况:
 <li> 不写return
 <li> 写return,但是后面没内容
 <li> 写return  underfined
@@ -209,7 +214,7 @@ underfined:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/05/17/Typescript/" data-id="clwak1mvj0000uw4hg7of3k9e" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/05/17/typescript/" data-id="clwak6sva0000ho4h1s6a6k7c" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -613,7 +618,7 @@ underfined:
       <ul>
         
           <li>
-            <a href="/2024/05/17/Typescript/">(no title)</a>
+            <a href="/2024/05/17/typescript/">(no title)</a>
           </li>
         
           <li>
