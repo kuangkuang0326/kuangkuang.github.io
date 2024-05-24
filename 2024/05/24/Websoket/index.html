@@ -9,18 +9,18 @@
   <meta name="description" content="websoket通信连接过程服务器和客户端的通信？ 那首先讲讲轮询记得上次mini的聊天就是用的轮询🥲🥲 短轮询 浏览器每隔一段时间向浏览器发送 http 请求，服务器端在收到请求后，不论是否有数据更新，都直接进行响应，通过让客户端不断的进行请求，使得客户端能够模拟实时地收到服务器端的数据的变化  这种方式由于需要不断的建立 http 连接，服务器端的压力就会变大 长轮询 首先由客户端向服务器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2024/05/17/websoket/index.html">
+<meta property="og:url" content="http://example.com/2024/05/24/Websoket/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="websoket通信连接过程服务器和客户端的通信？ 那首先讲讲轮询记得上次mini的聊天就是用的轮询🥲🥲 短轮询 浏览器每隔一段时间向浏览器发送 http 请求，服务器端在收到请求后，不论是否有数据更新，都直接进行响应，通过让客户端不断的进行请求，使得客户端能够模拟实时地收到服务器端的数据的变化  这种方式由于需要不断的建立 http 连接，服务器端的压力就会变大 长轮询 首先由客户端向服务器">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/image-1.png">
-<meta property="og:image" content="http://example.com/image-2.png">
-<meta property="og:image" content="http://example.com/image-3.png">
-<meta property="article:published_time" content="2024-05-17T10:32:19.083Z">
-<meta property="article:modified_time" content="2024-05-17T10:31:18.729Z">
+<meta property="og:image" content="https://img2.imgtp.com/2024/05/24/0tzVBqy6.png">
+<meta property="og:image" content="https://img2.imgtp.com/2024/05/24/M02VJhQW.png">
+<meta property="og:image" content="https://img2.imgtp.com/2024/05/24/ApO5v3tQ.png">
+<meta property="article:published_time" content="2024-05-24T05:01:16.170Z">
+<meta property="article:modified_time" content="2024-05-24T05:00:25.557Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/image-1.png">
+<meta name="twitter:image" content="https://img2.imgtp.com/2024/05/24/0tzVBqy6.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -79,10 +79,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-websoket" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-Websoket" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/05/17/websoket/" class="article-date">
-  <time class="dt-published" datetime="2024-05-17T10:32:19.083Z" itemprop="datePublished">2024-05-17</time>
+    <a href="/2024/05/24/Websoket/" class="article-date">
+  <time class="dt-published" datetime="2024-05-24T05:01:16.170Z" itemprop="datePublished">2024-05-24</time>
 </a>
     
   </div>
@@ -104,9 +104,9 @@
 
 <p> <br><b>TCP（传输控制协议）</b>是一个提供可靠、有序和错误检测能力的传输层通信协议，它通过三次握手建立一个长连接，这个连接可以保持开放状态，允许数据在任意时间双向传输</p>
 <p> <br>WebSocket 协议利用了 TCP 连接的这些特性，但它<u>在应用层上定义了一个新的协议</u>，这个协议通过一个 HTTP 握手过程来升级到 WebSocket 协议。这个过程允许 WebSocket 复用现有的 HTTP 基础设施（如代理、防火墙等），同时拥有其他优势，比如说：全双工通信、实时性、数据传输不需要携带 HTTP 头部信息–数据传输开销减少等等，我们说他<u> “类似” 是在强调它应用层上的特性</u></p>
-<h4 id="websoket-建立连接过程😴😴"><a href="#websoket-建立连接过程😴😴" class="headerlink" title="websoket 建立连接过程😴😴"></a>websoket 建立连接过程😴😴</h4><p>websoket 总的来说是三个阶段：打开握手–数据传递–关闭握手<br>建立连接时先进行 tcp 三次握手再进行 websoket 两次握手<br><img src="/image-1.png" alt="Alt text"></p>
+<h4 id="websoket-建立连接过程😴😴"><a href="#websoket-建立连接过程😴😴" class="headerlink" title="websoket 建立连接过程😴😴"></a>websoket 建立连接过程😴😴</h4><p>websoket 总的来说是三个阶段：打开握手–数据传递–关闭握手<br>建立连接时先进行 tcp 三次握手再进行 websoket 两次握手<br><img src="https://img2.imgtp.com/2024/05/24/0tzVBqy6.png" alt="Alt text"></p>
 <p><br><li><b>tcp 三次握手</b>🤗<br><br>所有基于 TCP 的连接都需要经过这个过程来确认双方的通信通道已经建立</p>
-<p><img src="/image-2.png" alt="Alt text"><br>最开始的时候客户端和服务器都是处于<b> CLOSED 关闭状态</b>。主动打开连接的为客户端，被动打开连接的是服务器</p>
+<p><img src="https://img2.imgtp.com/2024/05/24/M02VJhQW.png" alt="Alt text"><br>最开始的时候客户端和服务器都是处于<b> CLOSED 关闭状态</b>。主动打开连接的为客户端，被动打开连接的是服务器</p>
 <p>TCP 服务器进程先创建传输控制块 TCB，时刻准备接受客户进程的连接请求，此时服务器就进入了<b> LISTEN 监听状态</b></p>
 <p><br><b>第一次握手</b> TCP 客户进程也是先创建传输控制块 TCB，然后向服务器发出连接请求报文，这是报文首部中的同部位 SYN&#x3D;1，同时选择一个初始序列号 seq&#x3D;x ，此时，TCP 客户端进程进入了<b> SYN-SENT 同步已发送状态（证明客户端的发送能力正常）</b><br><br><b>第二次握手</b> TCP 服务器收到请求报文后，如果同意连接，则会向客户端发出确认报文。确认报文中应该 ACK&#x3D;1，SYN&#x3D;1，确认号是 ack&#x3D;x+1，同时也要为自己初始化一个序列号 seq&#x3D;y，此时，TCP 服务器进程进入了<b> SYN-RCVD 同步收到状态（证明服务器端的接收能力、发送能力正常）</b><br><br><b>第三次握手</b> TCP 客户端收到确认后，还要向服务器给出确认。确认报文的 ACK&#x3D;1，ack&#x3D;y+1，自己的序列号 seq&#x3D;x+1，此时，TCP 连接建立，客户端进入<b>ESTABLISHED已建立连接状态（触发三次握手，证明客户端的接收能力正常）</b></p>
 <p><br><b>为什么要进行第三次握手？</b></p>
@@ -134,7 +134,7 @@
 
 <br>
 
-<p><img src="/image-3.png" alt="Alt text"><br><br>数据传输完毕后，<u>双方都可释放连接</u>。最开始的时候，客户端和服务器都是处于<b>ESTABLISHED状态</b>，然后客户端主动关闭，服务器被动关闭</p>
+<p><img src="https://img2.imgtp.com/2024/05/24/ApO5v3tQ.png" alt="Alt text"><br><br>数据传输完毕后，<u>双方都可释放连接</u>。最开始的时候，客户端和服务器都是处于<b>ESTABLISHED状态</b>，然后客户端主动关闭，服务器被动关闭</p>
 <p><br><b>第一次挥手</b> 客户端发出连接释放报文，并且停止发送数据。释放数据报文首部，FIN&#x3D;1，其序列号为seq&#x3D;u（等于前面已经传送过来的数据的最后一个字节的序号加1），此时，客户端进入<b>FIN-WAIT-1（终止等待1）状态</b></p>
 <p><br><b>第二次挥手</b> 服务器端接收到连接释放报文后，发出确认报文，ACK&#x3D;1，ack&#x3D;u+1，并且带上自己的序列号seq&#x3D;v，此时，服务端就进入了<b>CLOSE-WAIT 关闭等待状态</b></p>
 <p><br><b>第三次挥手</b> 客户端接收到服务器端的确认请求后，客户端就会进入FIN-WAIT-2（终止等待2）状态，等待服务器发送连接释放报文，服务器将最后的数据发送完毕后，就向客户端发送连接释放报文，服务器就进入了<b>LAST-ACK（最后确认）状态</b>，等待客户端的确认</p>
@@ -145,7 +145,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/05/17/websoket/" data-id="clwajkk790001b44h37vr5u78" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/05/24/Websoket/" data-id="clwk7t0zb0000yg4h5ednhw7o" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -155,17 +155,8 @@
     
 <nav id="article-nav">
   
-    <a href="/2024/05/17/TS-node/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2024/03/17/hooks-usecallback/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2024/05/17/TS-node/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title"></div>
     </a>
@@ -205,11 +196,11 @@
       <ul>
         
           <li>
-            <a href="/2024/05/17/TS-node/">(no title)</a>
+            <a href="/2024/05/24/Websoket/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2024/05/17/websoket/">(no title)</a>
+            <a href="/2024/05/17/TS-node/">(no title)</a>
           </li>
         
           <li>
