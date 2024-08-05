@@ -1,833 +1,464 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en" color-mode="light">
+
+  <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="John Doe" />
+  <!-- Open Graph Description 简短摘要-->
+  
+  <!-- 用于搜索引擎的文章摘要 -->
   
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+  <title>
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+     Hexo
+  </title>
 
   
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/avatar.png">
   
-<link rel="stylesheet" href="/css/style.css">
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
 
   
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
   
-  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
 <meta name="generator" content="Hexo 7.0.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
       
+        <img src="/images/dog.jpg" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">kuangkuang0326</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <div class="container index">
+  <div class="post-list">
+    <!-- 遍历渲染文章 -->
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2024-07-28</div>
+        <div class="title">
+          <a href="/2024/07/28/npm-yarn-pnpm/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2024-07-21</div>
+        <div class="title">
+          <a href="/2024/07/21/Component%20extraction/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2024-05-24</div>
+        <div class="title">
+          <a href="/2024/05/24/websoket/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2024-05-17</div>
+        <div class="title">
+          <a href="/2024/05/17/TS-node/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2024-03-17</div>
+        <div class="title">
+          <a href="/2024/03/17/hooks-usecallback/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2024-03-02</div>
+        <div class="title">
+          <a href="/2024/03/02/hook-useeffect/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2023-12-10</div>
+        <div class="title">
+          <a href="/2023/12/10/closure/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Hello World">
+        <div class="time-m-d">2023-11-20</div>
+        <div class="title">
+          <a href="/2023/11/20/hello-world/">
+            
+              
+                <span>Hello World</span>
+              
+            
+          </a>
+        </div>
+      </div>
+    
+  </div>
+  <nav class="post-navigation">
+    
+    <span class="page-num">1 / 1</span>
+    
+  </nav>
+</div>
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="github" target="_blank" rel="noopener" href="https://github.com/kuangkuang0326">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/kuangkuang0326">kuangkuang0326</a>
+        
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2024 Oranges</a>
         
-          <a class="main-nav-link" href="/">Home</a>
+    </div>
+  
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
         
-      </nav>
-      <nav id="sub-nav">
+          <input type="text" class="search-input" id="search-input" placeholder="Search...">
         
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
         
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
         
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
       </div>
     </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-npm-yarn-pnpm" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/28/npm-yarn-pnpm/" class="article-date">
-  <time class="dt-published" datetime="2024-07-27T18:09:48.968Z" itemprop="datePublished">2024-07-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="npm-yarn-pnpm"><a href="#npm-yarn-pnpm" class="headerlink" title="npm-yarn-pnpm"></a>npm-yarn-pnpm</h2><p>记得刚进木犀的第一件事就是下载各种东西，里面就有node.js（一个大包嘿嘿😘</p>
-<h3 id="什么是npm-yarn-pnpm"><a href="#什么是npm-yarn-pnpm" class="headerlink" title="什么是npm yarn pnpm"></a>什么是npm yarn pnpm</h3><p>既然有了一个资源包，那肯定需要一种手段去管理和利用资源包的内容</p>
-<li>`npm`就是随`Node.js`一起安装的官方包管理工具，它为开发者搭建了一个庞大的资源库，允许他们在这个平台上搜索、安装和管理项目所必需的各种代码库或模块
-<li>`yarn`是 Facebook 于2016年发布的一款`JavaScript`包管理器，旨在弥补`npm`在性能和安全性方面的一些缺点,`yarn`引入了 "lockfile" 概念，保证了每次安装的准确性，并使用并行下载来优化性能
-<li>`pnpm`是另外一个JavaScript包管理器，它的主要卖点是它的高效性，`pnpm` 使用硬盘链接而不是复制来管理项目依赖，这可以极大地节省空间和安装时间
-
-<p>在执行<code>npm install</code>后，依赖模块被安装到了 <code>node_modules</code>目录下，那<code>node_modules</code>目录下的依赖管理机制又是如何的呢？🤨🤨</p>
-<h3 id="npm-Version1-树状结构"><a href="#npm-Version1-树状结构" class="headerlink" title="npm Version1(树状结构)"></a>npm Version1(树状结构)</h3><p>非常的简单粗暴，<code>npm</code>以递归的形式，严格按照<code>package.json</code>结构以及子依赖包的<code>package.json</code>结构将依赖安装到他们各自的<code>node_modules</code>中,直到有子依赖包不在依赖其他模块<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// package.json</span></span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;1.1&quot;</span>,</span><br><span class="line">  <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;A&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;B&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;C&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>假如现在我的项目 1.1 依赖两个模块<code>A</code>、<code>B</code>，而模块<code>A</code>又依赖<code>D@1.0.0</code>模块<code>B</code>、<code>C</code> 又依赖<code>D@2.0.0</code>那么，执行完<code>npm i</code>之后, <code>node_modules</code>的结构会和<code>package.json</code>结构一一对应，结构非常明显<br><br>但是，也<b>导致了<code>node_modules</code>会十分庞大</b>：需要安装的模块非常非常多，在不同层级的依赖中，就算是依赖同一个模块，都需要重新安装一次，会有大量的模块重复安装（比如前面的 <a href="mailto:&#x44;&#64;&#50;&#46;&#x30;&#46;&#48;">&#x44;&#64;&#50;&#46;&#x30;&#46;&#48;</a> 就会安装两次）<br><br>还有可能导致<b>层级嵌套很深</b>：系统对文件路径都会有一个最大长度的限制，嵌套层级过深可能导致奇妙的的问题（比如无法直接删除）</p>
-<h3 id="npm-Version3（扁平结构）"><a href="#npm-Version3（扁平结构）" class="headerlink" title="npm Version3（扁平结构）"></a>npm Version3（扁平结构）</h3><p>为了解决以上问题，NPM 在版本3做了一次较大更新，将之前的嵌套结构改为扁平结构<br><br>安装模块时，不管其是直接依赖还是子依赖的依赖（间接依赖），优先将其安装在<code>node_modules</code>根目录<br><br>当安装到相同模块时，判断在<code>node_modules</code>根目录已安装的模块版本是否符合新模块的版本范围，如果符合则跳过，不用再次安装；如果不符合就再装一个<br><br>在上一个例子中，那它的结构应该是<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   <span class="comment">// package.json</span></span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;1.1&quot;</span>,</span><br><span class="line">  <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;A&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;B&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;C&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// node_modules:&#123;</span></span><br><span class="line"><span class="comment">//     A;</span></span><br><span class="line"><span class="comment">//     B:&#123;</span></span><br><span class="line"><span class="comment">//         D@2.0.0;</span></span><br><span class="line"><span class="comment">//     &#125;;</span></span><br><span class="line"><span class="comment">//     C:&#123;</span></span><br><span class="line"><span class="comment">//         D@2.0.0;</span></span><br><span class="line"><span class="comment">//     &#125;;</span></span><br><span class="line"><span class="comment">//     D@1.0.0;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>在安装依赖<code>A</code>时，把<code>D@1.0.0</code>优先安装在了<code>node_modules</code>下，接着再安装依赖<code>B</code>时，其依赖的<code>D</code>也会优先考虑安装在根<code>node_modules</code>下，但是根<code>node_modules</code>下已经存在<code>D@1.0.0</code>所以只能将<code>D@2.0.0</code>安装在当前依赖<code>B</code>的<code>node_modules下</code>,最后再安装依赖<code>C@1.0.0</code>也是同样的原则</p>
-<p><br>虽然在满足<code>Node.js</code>的模块查找规则的同时降低了依赖层级，一定程度上缓解了占用磁盘空间（其实并没有完全解决，比如<a href="mailto:&#68;&#x40;&#x32;&#46;&#x30;&#46;&#48;">&#68;&#x40;&#x32;&#46;&#x30;&#46;&#48;</a>还是会被安装两次）和路径过长的问题</p>
-<h4 id="容易引发的问题：结构不确定性和幽灵依赖"><a href="#容易引发的问题：结构不确定性和幽灵依赖" class="headerlink" title="容易引发的问题：结构不确定性和幽灵依赖"></a>容易引发的问题：结构不确定性和幽灵依赖</h4><p><b>目录结构不确定</b></p>
-<p>依照 npm V3 的原则，依赖的安装顺序是会改变目录结构的，比如：此时我<code>B</code>先安装，那么目录结构就会变成<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// node_modules:&#123;</span></span><br><span class="line"><span class="comment">//     B;</span></span><br><span class="line"><span class="comment">//     A:&#123;</span></span><br><span class="line"><span class="comment">//         D@1.0.0;</span></span><br><span class="line"><span class="comment">//     &#125;;</span></span><br><span class="line"><span class="comment">//     C;</span></span><br><span class="line"><span class="comment">//     D@2.0.0;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>优先安装了<code>B</code>，<code>B</code>又依赖<code>D@2.0.0</code>，所以依赖<a href="mailto:&#68;&#64;&#50;&#x2e;&#x30;&#46;&#x30;">&#68;&#64;&#50;&#x2e;&#x30;&#46;&#x30;</a> 优先安装在根<code>node_modules</code>目录下，当安装依赖<code>A</code>时，其间接依赖<code>D@1.0.0</code>就只能安装在其自身的<code>node_modules</code>目录下</p>
-<p><br><b>幽灵依赖</b>：</p>
-<p>一个库使用了没有在<code>package.json</code>中声明的依赖但是可以用，在一开始的例子里，项目 1.1 的依赖可以直接访问到<code>D</code>依赖，虽然它们没有在<code>package.json</code>中声明<br><br>那么就有可能出现：<br><br><b>不兼容的版本</b>：依赖可能需要的D版本是2.0.0，但是引入的是却是版本1.0.0（这个通过package-lock.json文件可以解决）<br><br><b>缺少依赖</b>：当我们项目里面没有安装到它所依赖的包时，此时就会报错<br><br>其实幽灵依赖这种隐患在<code>npm</code>树状结构的情况下是能够尽量避免的，因为树状结构严格按照<code>package.json</code>中声明的依赖安装，扁平化这种结构虽然减少依赖重复安装，但它把依赖的依赖提上来之后却使幽灵依赖出现的可能性更大</p>
-<h3 id="npm-Version5"><a href="#npm-Version5" class="headerlink" title="npm Version5"></a>npm Version5</h3><p>为了解决<code>npm i</code>时依赖结构不确定的问题，在<code>npm</code>版本5新增了<code>package-lock.json</code>文件（一个严格的<code>package.json</code><br><br><li><b>固定依赖结构</b>：<code>package-lock.json</code> 的作用是锁定依赖结构，即只要目录下有该文件，那么每次执行<code>npm i</code>后生成的<code>node_modules</code>目录结构是相同的，同时版本也会锁定在指定的范围内<br><br><li><b>提高安装速度</b>：<code>package-lock.json</code> 中已经缓存了每个包的具体版本和下载链接，不需要再去远程仓库进行查询<br><br>虽然解决了结构不确定性问题，但是同为扁平结构的 npm V5 还是会出现幽灵依赖的问题</p>
-<h3 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h3><p>yarn是在 2016 年发布的，那时 npm 还处于 V3 时期，还没有<code>package-lock.json</code>文件，就像上面提到的：不稳定性、安装速度慢等缺点经常会受到吐槽，此时，yarn 就诞生了， 后来 npm 也意识到了自己的问题，进行了很多次优化<br><br> yarn 也采用的是 npm v3 的扁平结构来管理依赖，会生成一个<code>yarn.locck</code>文件，不同的是 yarn 在安装包时为<b>并行安装</b>，即：同时下载和安装多个依赖项，而不是按顺序一个接一个地进行，可以显著减少安装时间<br><br> 很明显，管理方式使得<code>yarn</code>也会遇到幽灵依赖的情况</p>
-<h3 id="pnpm"><a href="#pnpm" class="headerlink" title="pnpm"></a>pnpm</h3><p><code>pnpm--performant npm</code>在 2017 年正式发布，定义为快速的，节省磁盘空间的包管理工具，开创了一套新的依赖管理机制，该机制会将包安装在系统的全局 store 中，依赖的每个版本只会在系统中安装一次<br><br>在引用项目 node_modules 的依赖时，会通过<b>硬链接与软链接</b>在全局 store 中找到这个文件<br><br>利用<code>pnpm</code>下载依赖包时，项目的根<code>node_modules</code>里面依赖和<code>package.json</code>里声明的一一对应，简而言之，就是我们在项目的<code>package.json</code>里定义了什么包 modules 文件夹中只会有什么包，不会有次级依赖的包<br><br>回到一开始的例子–项目 1.1 ，那么在根<code>node_modules</code>目录下的依赖只有三个<code>A@1.0.0</code>、<code>B@1.0.0</code>、<code>C@1.0.0</code>，不会有他们的次级依赖，因为在项目 1.1 的<code>package.json</code>中声明的也就只有这三个依赖，没有其他的了<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// node_modules:&#123;</span></span><br><span class="line"><span class="comment">//   .pnpm:&#123;</span></span><br><span class="line"><span class="comment">//     A:&#123;</span></span><br><span class="line"><span class="comment">//       node_modules:&#123;</span></span><br><span class="line"><span class="comment">//         A;</span></span><br><span class="line"><span class="comment">//         D@1.0.0;</span></span><br><span class="line"><span class="comment">//       &#125;</span></span><br><span class="line"><span class="comment">//     &#125;;</span></span><br><span class="line"><span class="comment">//     B:&#123;</span></span><br><span class="line"><span class="comment">//       node_modules:&#123;</span></span><br><span class="line"><span class="comment">//         B;</span></span><br><span class="line"><span class="comment">//         D@2.0.0;</span></span><br><span class="line"><span class="comment">//       &#125;</span></span><br><span class="line"><span class="comment">//     &#125;;</span></span><br><span class="line"><span class="comment">//     C:&#123;</span></span><br><span class="line"><span class="comment">//       node_modules:&#123;</span></span><br><span class="line"><span class="comment">//         C;</span></span><br><span class="line"><span class="comment">//         D@2.0.0;</span></span><br><span class="line"><span class="comment">//       &#125;</span></span><br><span class="line"><span class="comment">//     &#125;;</span></span><br><span class="line"><span class="comment">//     D@1.0.0:&#123;</span></span><br><span class="line"><span class="comment">//       node_modules:&#123;</span></span><br><span class="line"><span class="comment">//         D@1.0.0;</span></span><br><span class="line"><span class="comment">//       &#125;</span></span><br><span class="line"><span class="comment">//     &#125;;</span></span><br><span class="line"><span class="comment">//     D@2.0.0:&#123;</span></span><br><span class="line"><span class="comment">//       node_modules:&#123;</span></span><br><span class="line"><span class="comment">//         D@2.0.0;</span></span><br><span class="line"><span class="comment">//       &#125;</span></span><br><span class="line"><span class="comment">//     &#125;;;</span></span><br><span class="line"><span class="comment">//   &#125;</span></span><br><span class="line"><span class="comment">//   B;</span></span><br><span class="line"><span class="comment">//   A;</span></span><br><span class="line"><span class="comment">//   C;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>但是在根<code>node_modules</code>目录下的依赖又不是他们真正的物理位置，而是类似于一个指针，指向<code>.pnpm</code>文件夹下的依赖的真实位置（软链接<br><br>项目的<code>node_modules</code>下会生成一<code>.pnpm</code>文件夹，以平铺的形式储存着所有的包（包括次级依赖），其中，<code>A</code> <code>B</code> <code>C</code>中的依赖<code>D</code>会指向与它们平级的依赖<code>D</code>（软链接），而其本身则通过硬链接指向全局 store 中的真正的依赖包<br><br>当需要引用<code>A</code>时，会指向 modules 文件夹中的那个A，而它会依靠软接指向<code>.pnpm</code>文件夹下的<code>A</code>，进而通过硬链接指向磁盘中真正的依赖包，并且，由于<code>A</code>又依赖于<code>D1</code>，则<code>A</code>下的<code>D1</code>会依靠软链接指向与<code>A</code>平级的<code>D1</code>，再通过硬链接指向磁盘中的<code>D1</code><br><br>依赖的依赖会在 .pnpm 文件夹中指向同一个平级的依赖，解决了相同依赖重复下载的问题，而由于 modules 文件中并没有次级依赖包，就解决了幽灵依赖的问题，其次，由于引用时路径最终会通过硬链接指向磁盘，使得即时有多个项目也不会重复安装依赖包，节约磁盘空间<br><br>严格模式？<br><br>无</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/28/npm-yarn-pnpm/" data-id="clz4g5nyx0000d04h0lai02lv" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Component extraction" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/21/Component%20extraction/" class="article-date">
-  <time class="dt-published" datetime="2024-07-21T08:45:48.539Z" itemprop="datePublished">2024-07-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="一、组件开发原则"><a href="#一、组件开发原则" class="headerlink" title="一、组件开发原则"></a>一、组件开发原则</h3><p>小而美、可拓性强</p>
-<h3 id="二、组件逻辑独立性"><a href="#二、组件逻辑独立性" class="headerlink" title="二、组件逻辑独立性"></a>二、组件逻辑独立性</h3><p>无非两个事情，抽象逻辑和暴露接口，先基于页面内容和功能抽出组件，将页面功能和逻辑抽出，再根据具体功能调节好连接组件内部和连接外部的接口</p>
-<h3 id="三、样式独立性"><a href="#三、样式独立性" class="headerlink" title="三、样式独立性"></a>三、样式独立性</h3><h4 id="一-module-css"><a href="#一-module-css" class="headerlink" title="(一)module.css"></a>(一)module.css</h4><p>是一个CSS文件的命名约定or组织方式，它允许我们写出具有局部作用域的CSS类，这意味着这些类名仅在它们被定义的模块内有效，从而避免了全局命名冲突</p>
-<li><b>1. css modules 解决了什么问题</b>🤗
-
-<p><br><b>全局命名冲突</b><br>因为CSS Modules只关心组件本身，只要保证组件本身命名不冲突，就不会有这样的问题，一个组件被编译之后的类名可能是这样的：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* App.css */</span></span><br><span class="line"><span class="selector-class">.text</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/* 编译之后可能是这样的 */</span></span><br><span class="line"><span class="selector-class">.App__text___3lRY_</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>命名唯一，保证了全局不冲突</p>
-<p><br><b>模块化</b><br>可以使用composes来引入自身模块中的样式以及另一个模块的样式（避免重复）：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.serif-font</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: Georgia, serif;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.display</span> &#123;</span><br><span class="line">  composes: serif-font;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">35px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.element</span> &#123;</span><br><span class="line">  composes: dark-red from <span class="string">&quot;./colors.css&quot;</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 引用了相对路径为 &quot;./colors.css&quot; 的类名为的样式 dark-red  */</span></span><br></pre></td></tr></table></figure>
-
-<p><br><b>解决嵌套层次过深的问题</b></p>
-<p>因为CSS Modules只关注与组件本身，组件本身基本都可以使用扁平的类名来写，类似于这样的:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.root</span> &#123;</span><br><span class="line">  composes: box from <span class="string">&quot;shared/layout.css&quot;</span>;</span><br><span class="line">  <span class="attribute">border-style</span>: dotted;</span><br><span class="line">  <span class="attribute">border-color</span>: green;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.text</span> &#123;</span><br><span class="line">  composes: heading from <span class="string">&quot;shared/typography.css&quot;</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">200</span>;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<li><b>2. 使用module.css</b>
-
-<p><br>1.创建css模块文件，比如 styles.module.css 编写css规则，这些规则默认具有局部作用域</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* styles.module.css */</span></span><br><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.button</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: darkblue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><br>2.导入css模块，导入的css模块会作为一个对象提供所有类名，再使用css类,在组件中使用导入的CSS类,由于CSS模块的类名具有局部作用域，就可以直接使用而不必担心全局冲突</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> styles <span class="keyword">from</span> <span class="string">&#x27;./styles.module.css&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">MyButton</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">className</span>=<span class="string">&#123;styles.button&#125;</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><br>3.在 config.js文件中构建配置<br><br>4..在编译时,构建工具将处理css模块并生成最终的css文件，并会将类名替换为唯一的哈希值以避免冲突<br><br>补充：如果你需要在CSS模块中定义全局可用的类，可以在类名前面加上 :global 伪类，如果需要在其他模块中使用全局类，可以将其导出并在其他模块中导入</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:global .globalButton &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<li><b>3. 小结</b>😘
-
-<p><br>modules依靠css模块技术实现样式独立性<br><br>CSS模块中的类名默认只在定义它们的模块内有效，每个模块的作用域是隔离的，意味着即使类名在不同的模块中相同，它们也不会相互冲突<br><br>当CSS模块被构建工具处理时，类名通常会被转换成基于文件名和类名的唯一哈希值,这样即使类名相同，生成的CSS选择器也是唯一的<br><br>在JavaScript或组件文件中导入CSS模块时，不是导入样式本身，而是导入一个包含类名作为属性的对象,这样的话，类名的使用就被限制在导入它们的上下文中</p>
-<h4 id="（二）BEM规则"><a href="#（二）BEM规则" class="headerlink" title="（二）BEM规则"></a>（二）BEM规则</h4><li><b>1. 是什么</b>🤨
-
-<p><br>是一种命名规范，旨在简化CSS编写并提高代码的可读性和可维护性，能够最有效解决样式之间同名、继承、优先级等所带来的污染性问题，避免最后因为充斥着各种臃肿，而不敢触及修改遗留的各种未知样式<br><br>该方法将HTML元素划分为三个部分:块<code>block</code>元素<code>element</code>和修饰符<code>modifier</code></p>
-<p><br>块（block）是BEM的核心部分，它定义了一个<code>HTML</code>元素的基本结构和行为,块可以使用大写字母命名，例如<code>.Header</code> <code>.Main</code> <code>.Footer</code>等,可以随意的嵌套组合、可复用<br><br>元素（element）是块的一个组成部分，它定义了块中特定内容的样式,元素可以使用小写字母命名，例如<code>.header</code> <code>.main</code> <code>.footer</code>等，依赖block存在（出了block就不能用）<br><br>修饰符（modifier）是针对块或元素的特定状态或行为进行配置的方法,修饰符可以使用中划线（_）或破折号（-）进行命名，例如<code>.header--large</code> <code>.main--centered</code> <code>.footer--light</code>等，一个可选的定义block和element外观的行为<br><br>即：利用<code>-</code>和<code>--</code>将样式命名分区😈，不这么写也行，也没人逼你</p>
-<br>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;button button--large&quot;</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 比如说我写一个按钮 --&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">  <span class="comment">/* 基类-按钮通用样式 */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.button--large</span> &#123;</span><br><span class="line">  <span class="comment">/* 修饰符-大按钮特定样式 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><b>BEM优缺点</b>😈</p>
-<li>优点：
-
-<p><br>结构简单明了易于维护，提高可拓展性<br><br>避免对JS依赖：BEM方法使用静态类名，类名在<code>html</code>中是明确定义的，不需要JavaScript来动态添加或移除类，从而减少了对JavaScript的依赖，降低页面的负载和提高性能<br><br>样式隔离–块独立性：每个块都是独立的，拥有自己的样式，不依赖于其他元素或块，使得块可以在上下文中被使用，更不用担心样式冲突<br><br>样式隔离–元素封装：块内的元素只依赖于它们所属的块，而不是其他块或元素。这确保了元素的样式不会泄露到块外部，保持了样式的封装性<br><br></p>
-<li>缺点：
-
-<p><br>过度使用会觉得代码有点冗余，特别是类名很长的时候（我就爱写长长的类名bushi🥲（只写三级比较好 呃呃🤗<br><br>在项目中拥有大量的块和元素，很有可能导致命名冲突、可拓展性问题</p>
-<h3 id="四、依赖独立性"><a href="#四、依赖独立性" class="headerlink" title="四、依赖独立性"></a>四、依赖独立性</h3><p>这三个字段是JavaScript项目中使用npm管理依赖时package.json文件的组成部分，它们分别代表不同类型的依赖关系：</p>
-<h4 id="（一）dependencies"><a href="#（一）dependencies" class="headerlink" title="（一）dependencies"></a>（一）dependencies</h4><p><b>是什么</b>：<code>dependencies</code>（依赖）字段列出了项目运行所必需的依赖，这些依赖在项目部署到生产环境时会被包含进来。<br><br><b>怎么用</b>：当你的项目需要某个库来执行核心功能时，你应该把这个库添加到<code>dependencies</code>中<br>例如，如果你的项目是一个web应用，并且使用了React库，那么React就应该被列为<code>dependencies</code><br><br><b>示例</b></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;react&quot;</span>: <span class="string">&quot;^16.8.0&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="（二）devDependencies"><a href="#（二）devDependencies" class="headerlink" title="（二）devDependencies"></a>（二）devDependencies</h4><p>是什么：<code>devDependencies</code>(开发依赖)字段包含了只在开发过程中需要的依赖，比如测试框架、构建工具、代码分析工具等,这些依赖在生产环境中不会被安装<br>怎么用：如果你需要某些工具或库来帮助你开发项目（如Webpack、Jest、ESLint等），但这些工具或库在项目部署后不需要，那么应该将它们添加到<code>devDependencies</code><br><br><b>示例</b></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;jest&quot;</span>: <span class="string">&quot;^24.1.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;webpack&quot;</span>: <span class="string">&quot;^4.29.0&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="（三）peerDependencies"><a href="#（三）peerDependencies" class="headerlink" title="（三）peerDependencies"></a>（三）peerDependencies</h4><p><b>是什么</b>：<code>peerDependencies</code>（协作依赖）字段用于定义你的库需要与其配合使用的其他库的依赖，但不直接指定版本。这通常用于库的作者，当库需要与其他库协同工作，但不打算控制这些库的版本时<br><br><b>怎么用</b>：当你创建一个库，并希望使用者根据需要安装特定版本的依赖时，你可以在<code>peerDependencies</code>中声明这些依赖。使用者在安装你的库时，需要自己指定这些依赖的版本<br><br><b>示例</b></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;peerDependencies&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;jquery&quot;</span>: <span class="string">&quot;^3.3.1&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><b>区别：</b><br><code>dependencies</code>是项目运行所必需的，会随项目一起部署到生产环境<br><code>devDependencies</code>仅用于开发和测试，不会部署到生产环境<br><code>peerDependencies</code>是一种特殊的依赖声明，用于库与库之间的协同工作，由使用者决定具体版本</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/21/Component%20extraction/" data-id="clyvbscl70000jw4heoe9bp9p" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-websoket" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/05/24/websoket/" class="article-date">
-  <time class="dt-published" datetime="2024-05-24T05:01:16.170Z" itemprop="datePublished">2024-05-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="websoket通信连接过程"><a href="#websoket通信连接过程" class="headerlink" title="websoket通信连接过程"></a>websoket通信连接过程</h1><p>服务器和客户端的通信？</p>
-<p>那首先讲讲轮询<br>记得上次mini的聊天就是用的轮询🥲🥲</p>
-<p><b>短轮询</b><br> 浏览器<u>每隔一段时间向浏览器发送 http 请求</u>，服务器端在收到请求后，不论是否有数据更新，都<u>直接进行响应</u>，通过让客户端不断的进行请求，使得客户端能够模拟实时地收到服务器端的数据的变化</p>
-<p> 这种方式由于需要不断的建立 http 连接，服务器端的压力就会变大</p>
-<p><b>长轮询</b><br> 首先由客户端向服务器发起请求，当服务器收到客户端发来的请求后，服务器端不会直接进行响应，而是先将这个请求挂起，然后<u>判断服务器端数据是否有更新</u>，如果有更新，则进行响应，如果一直没有数据，则到达一定的时间限制才返回</p>
-<p> 一般 JavaScript 响应处理函数会在处理完服务器返回的信息后，再次发出请求，重新建立连接</p>
-<p> 虽然明显减少了很多不必要的 http 请求次数，但是长时间的连接挂起也会导致资源的浪费</p>
-<p><b>好，轮到 websoket了😈😈</b><br>WebSocket 是一种<mark>基于 TCP 连接上进行全双工通信的协议</mark>，相对于 HTTP 这种非持久的协议来说，WebSocket 是一个持久化网络通信的协议；它不仅可以实现客户端请求服务器，同时可以允许服务端主动向客户端推送数据</p>
-<h3 id="websoket通信原理和机制😴😴"><a href="#websoket通信原理和机制😴😴" class="headerlink" title="websoket通信原理和机制😴😴"></a>websoket通信原理和机制😴😴</h3><p> WebSocket 约定了一个通信的规范，通过一个<mark>握手的机制</mark>，客户端和服务器之间能建立一个<u>类似 tcp 服务器</u>保持长连接，数据发送是双向。</p>
- <li>明明 websoket 就是基于 tcp 三次握手应用的，为什么说是类似 tcp 服务器保持长连接？
-
-<p> <br><b>TCP（传输控制协议）</b>是一个提供可靠、有序和错误检测能力的传输层通信协议，它通过三次握手建立一个长连接，这个连接可以保持开放状态，允许数据在任意时间双向传输</p>
-<p> <br>WebSocket 协议利用了 TCP 连接的这些特性，但它<u>在应用层上定义了一个新的协议</u>，这个协议通过一个 HTTP 握手过程来升级到 WebSocket 协议。这个过程允许 WebSocket 复用现有的 HTTP 基础设施（如代理、防火墙等），同时拥有其他优势，比如说：全双工通信、实时性、数据传输不需要携带 HTTP 头部信息–数据传输开销减少等等，我们说他<u> “类似” 是在强调它应用层上的特性</u></p>
-<h4 id="websoket-建立连接过程😴😴"><a href="#websoket-建立连接过程😴😴" class="headerlink" title="websoket 建立连接过程😴😴"></a>websoket 建立连接过程😴😴</h4><p>websoket 总的来说是三个阶段：打开握手–数据传递–关闭握手<br>建立连接时先进行 tcp 三次握手再进行 websoket 两次握手<br><img src="https://img2.imgtp.com/2024/05/24/0tzVBqy6.png" alt="Alt text"></p>
-<p><br><li><b>tcp 三次握手</b>🤗<br><br>所有基于 TCP 的连接都需要经过这个过程来确认双方的通信通道已经建立</p>
-<p><img src="https://img2.imgtp.com/2024/05/24/M02VJhQW.png" alt="Alt text"><br>最开始的时候客户端和服务器都是处于<b> CLOSED 关闭状态</b>。主动打开连接的为客户端，被动打开连接的是服务器</p>
-<p>TCP 服务器进程先创建传输控制块 TCB，时刻准备接受客户进程的连接请求，此时服务器就进入了<b> LISTEN 监听状态</b></p>
-<p><br><b>第一次握手</b> TCP 客户进程也是先创建传输控制块 TCB，然后向服务器发出连接请求报文，这是报文首部中的同部位 SYN&#x3D;1，同时选择一个初始序列号 seq&#x3D;x ，此时，TCP 客户端进程进入了<b> SYN-SENT 同步已发送状态（证明客户端的发送能力正常）</b><br><br><b>第二次握手</b> TCP 服务器收到请求报文后，如果同意连接，则会向客户端发出确认报文。确认报文中应该 ACK&#x3D;1，SYN&#x3D;1，确认号是 ack&#x3D;x+1，同时也要为自己初始化一个序列号 seq&#x3D;y，此时，TCP 服务器进程进入了<b> SYN-RCVD 同步收到状态（证明服务器端的接收能力、发送能力正常）</b><br><br><b>第三次握手</b> TCP 客户端收到确认后，还要向服务器给出确认。确认报文的 ACK&#x3D;1，ack&#x3D;y+1，自己的序列号 seq&#x3D;x+1，此时，TCP 连接建立，客户端进入<b>ESTABLISHED已建立连接状态（触发三次握手，证明客户端的接收能力正常）</b></p>
-<p><br><b>为什么要进行第三次握手？</b></p>
-<p>客户端向服务器端发送的请求报文由于网络等原因滞留，未能发送到服务器端，此时连接请求报文失效<br><br>客户端在一定时间后没有收到响应，可能会认为请求失败了，因此它会重发相同的连接请求，之后与服务器端建立连接<br><br>当连接释放后，由于网络通畅了，第一次客户端发送的请求报文又突然到达了服务器端，这条请求报文本该失效了，但此时服务器端误认为客户端又发送了一次连接请求，两次握手建立好连接，此时客户端忽略服务器端发来的第二次握手确认请求，并不利用这个连接发送数据，造成不必要的错误和网络资源的浪费</p>
-<p><br>如果采用三次握手的话，就算那条失效的报文发送到服务器端，服务器端确认并向客户端发送报文，但此时客户端不会发出确认，由于客户端没有确认，由于服务器端没有接收到确认，前面那次不必要的连接请求就不会成功</p>
-<p><br><li><b>websoket两次握手😈<br>使用http请求来完成协议升级过程</b></p>
-<p>第一次握手：<br><b>客户端</b>通过发送一个<u>HTTP请求到服务器</u>来发起WebSocket握手，这个请求包含特定的HTTP头字段Upgrade: websocket，表明客户端希望将连接<u>从HTTP升级到WebSocket</u></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">GET</span> /chat <span class="variable constant_">HTTP</span>/<span class="number">1.1</span></span><br><span class="line"><span class="title class_">Host</span>: <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>：<span class="number">3000</span></span><br><span class="line"><span class="title class_">Upgrade</span>: websocket</span><br><span class="line"><span class="title class_">Connection</span>: <span class="title class_">Upgrade</span></span><br><span class="line"><span class="title class_">Sec</span>-<span class="title class_">WebSocket</span>-<span class="title class_">Key</span>: dGhlIHNhbXBsZSBub25jZQ==</span><br><span class="line"><span class="title class_">Sec</span>-<span class="title class_">WebSocket</span>-<span class="title class_">Version</span>: <span class="number">13</span></span><br></pre></td></tr></table></figure>
-
-<p>第二次握手：<br><b>服务器</b>收到这个HTTP请求后，如果同意升级连接，则会发送一个HTTP响应<br><br>这个响应包含HTTP头字段Upgrade: websocket，表明服务器也同意升级连接<br><br>此外，服务器还会在响应中包含<u>其他一些头字段</u>，如Connection和Sec-WebSocket-Accept，后者是WebSocket协议中的一个安全步骤，用于验证服务器响应的合法性<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">HTTP</span>/<span class="number">1.1</span> <span class="number">101</span> <span class="title class_">Switching</span> <span class="title class_">Protocols</span></span><br><span class="line"><span class="title class_">Upgrade</span>: websocket</span><br><span class="line"><span class="title class_">Connection</span>: <span class="title class_">Upgrade</span></span><br><span class="line"><span class="title class_">Sec</span>-<span class="title class_">WebSocket</span>-<span class="title class_">Accept</span>: 1o/<span class="title class_">WUy</span>+zP5NZXl/<span class="title class_">Kd</span>/<span class="title class_">HXjxR</span>0TQ=</span><br></pre></td></tr></table></figure>
-
-<h4 id="websoket断开连接😴😴"><a href="#websoket断开连接😴😴" class="headerlink" title="websoket断开连接😴😴"></a>websoket断开连接😴😴</h4><li>首先websoket会<b>用一个控制帧来关闭连接</b>😈
-<br>1. 任何一方（客户端或服务器）都可以通过发送一个包含特定 opcode 的控制帧来发起关闭连接的请求。对于 WebSocket 协议，这个 opcode 是 0x08，代表一个关闭帧（Close Frame）
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ws = <span class="keyword">new</span> <span class="title class_">WebSocket</span>(<span class="string">&#x27;ws://localhost:3000&#x27;</span>);</span><br><span class="line">ws.<span class="property">onclose</span> = <span class="keyword">function</span>(<span class="params">event</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Closing handshake has been completed&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line">ws.<span class="title function_">close</span>(); <span class="comment">// 发送关闭帧</span></span><br></pre></td></tr></table></figure>
-
-<br>
-2. 一旦一方接收到关闭帧，它必须也发送一个关闭帧作为响应，以确认连接的关闭
-<br>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">WebSocket</span> = <span class="built_in">require</span>(<span class="string">&#x27;ws&#x27;</span>);</span><br><span class="line">ws.<span class="title function_">on</span>(<span class="string">&#x27;close&#x27;</span>, <span class="function">(<span class="params">code, reason</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Connection closed, code=<span class="subst">$&#123;code&#125;</span>, reason=<span class="subst">$&#123;reason&#125;</span>`</span>);</span><br><span class="line">  <span class="comment">// 发送关闭帧</span></span><br><span class="line">  ws.<span class="title function_">close</span>(code, reason);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<br>
-<li>一旦 WebSocket 连接关闭，底层的 TCP 连接也会关闭，这就涉及到<b> tcp 四次挥手</b>😈
-
-<br>
-
-<p><img src="https://img2.imgtp.com/2024/05/24/ApO5v3tQ.png" alt="Alt text"><br><br>数据传输完毕后，<u>双方都可释放连接</u>。最开始的时候，客户端和服务器都是处于<b>ESTABLISHED状态</b>，然后客户端主动关闭，服务器被动关闭</p>
-<p><br><b>第一次挥手</b> 客户端发出连接释放报文，并且停止发送数据。释放数据报文首部，FIN&#x3D;1，其序列号为seq&#x3D;u（等于前面已经传送过来的数据的最后一个字节的序号加1），此时，客户端进入<b>FIN-WAIT-1（终止等待1）状态</b></p>
-<p><br><b>第二次挥手</b> 服务器端接收到连接释放报文后，发出确认报文，ACK&#x3D;1，ack&#x3D;u+1，并且带上自己的序列号seq&#x3D;v，此时，服务端就进入了<b>CLOSE-WAIT 关闭等待状态</b></p>
-<p><br><b>第三次挥手</b> 客户端接收到服务器端的确认请求后，客户端就会进入FIN-WAIT-2（终止等待2）状态，等待服务器发送连接释放报文，服务器将最后的数据发送完毕后，就向客户端发送连接释放报文，服务器就进入了<b>LAST-ACK（最后确认）状态</b>，等待客户端的确认</p>
-<p><br><b>第四次挥手</b> 客户端收到服务器的连接释放报文后，必须发出确认，ACK&#x3D;1，ack&#x3D;w+1，而自己的序列号是seq&#x3D;u+1，此时，客户端就进入了<b>TIME-WAIT（时间等待）状态</b>，但此时TCP连接还未终止，必须要经过<mark>2MSL后（最长报文寿命）</mark>，当客户端撤销相应的TCB后，客户端才会进入<b>CLOSED关闭状态</b>，服务器端接收到<u>确认报文后，会立即进入<b>CLOSED关闭状态</b></u>，到这里TCP连接就断开了，四次挥手完成</p>
-<p><br><b>为什么客户端要等待2MSL？</b>🤨</p>
-<p>主要原因是为了保证客户端发送那个的<u>第一个ACK报文能到到服务器</u>，因为这个ACK报文可能丢失，并且<mark>2MSL是任何报文在网络上存在的最长时间</mark>，超过这个时间报文将被丢弃，这样新的连接中不会出现旧连接的请求报文。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/05/24/websoket/" data-id="clwk7wf020000aw4h1f3saqzl" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-TS-node" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/05/17/TS-node/" class="article-date">
-  <time class="dt-published" datetime="2024-05-17T10:54:48.155Z" itemprop="datePublished">2024-05-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h1><p>看似是分享,其实是笔记思密达🥲🥲</p>
-<h4 id="TS是什么"><a href="#TS是什么" class="headerlink" title="TS是什么?"></a>TS是什么?</h4><li>TypeScript 简称：TS，是 JavaScript 的超集。简单来说就是：JS 有的 TS 都有,JS写的代码在TS的环境下都能跑
-<li>在 JS 基础之上，为 JS 添加了类型支持。TypeScript = Type + JavaScript
-<li>TypeScript 是微软开发的开源编程语言，可以在任何运行 JavaScript 的地方运行
-
-
-<h4 id="为什么要为-JS-添加类型支持"><a href="#为什么要为-JS-添加类型支持" class="headerlink" title="为什么要为 JS 添加类型支持?"></a>为什么要为 JS 添加类型支持?</h4><li>废话，当然是因为js有缺陷
-1. JS 的类型系统是弱类型的，没有类型的概念
-2. JavaScript 属于<b>动态类型的编程语言</b>，边解释边执行，错误只能在<b>运行阶段</b>才能发现
-
-<li>TS属于<b>静态类型的编程语言</b>
-1. 它要先编译(ts-node)，再执行  不能直接执行，需要编译成js才能执行
-2. 它会在编译期间做类型检查，可以提前到在<b>编写代码的同时就发现代码中的类型错误</b>
-
-
-<h3 id="TS语法"><a href="#TS语法" class="headerlink" title="TS语法"></a>TS语法</h3><h4 id="类型注解"><a href="#类型注解" class="headerlink" title="类型注解"></a>类型注解</h4><p>————变量的注释，为变量添加约束</p>
-<p>TS提供了JS的所有功能，并额外增加了：<b>类型系统</b></p>
-<li>TS中定义变量(常量)可以指定类型
-<li>A类型的变量不能保存B类型的数据
-
-<p>———<u>可以标记代码的意外行为，减少错误</u><br><br></p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">age</span>: <span class="built_in">number</span> = <span class="number">18</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="类型推论"><a href="#类型推论" class="headerlink" title="类型推论"></a>类型推论</h4><p>在 TS 中，某些没有明确指定类型的情况下，<b>TS 的类型推论机制会自动提供类型</b></p>
-<p>常见场景：</p>
-<ol>
-<li>声明变量并初始化时</li>
-<li>决定函数返回值时</li>
-</ol>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 变量 age 的类型被自动推断为：number</span></span><br><span class="line"><span class="keyword">let</span> age = <span class="number">18</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数返回值的类型被自动推断为：number</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">num1: <span class="built_in">number</span>, num2: <span class="built_in">number</span></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> num1 + num2</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h4><p>ts的基础类型分为两类</p>
-<li>1.js原有类型
-原始类型
-<br>
-
- <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">age</span>: <span class="built_in">number</span> = <span class="number">18</span></span><br><span class="line"><span class="keyword">let</span> <span class="title class_">Name</span>: <span class="built_in">string</span> = <span class="string">&#x27;xiaoyubuchiyu&#x27;</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="literal">null</span> = <span class="literal">null</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">b</span>: <span class="literal">undefined</span> = <span class="literal">undefined</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">s</span>: <span class="built_in">symbol</span> = <span class="title class_">Symbol</span>()</span><br><span class="line"><span class="keyword">let</span> <span class="attr">bo</span>:<span class="built_in">boolean</span> = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>对象类型—(一个单词概括🤗🤗🤗)<br>object(数组&#x2F;对象&#x2F;函数)<br><br></p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">number</span>: <span class="built_in">number</span>[]=[<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="keyword">let</span> <span class="attr">number</span>:<span class="title class_">Array</span>&lt;<span class="built_in">number</span>&gt;=[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">let</span> <span class="keyword">function</span>(<span class="params">a:<span class="built_in">string</span> b:<span class="built_in">number</span></span>):<span class="built_in">string</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><br><li>2.ts新增类型😴😴😴<br>联合类型  自定义类型(类型别名)  接口  元组  字面量类型  枚举  void  any  好多好多好多好多</p>
-<p><b>挑一些常用的讲讲</b>🤗🤗🤗</p>
-<li><b>1. 联合类型:</b>
-可以定义一个变量,使其可以是多种类型,不限制于一种,类似于逻辑运算符 || , 但是ts只有一根竖线
-<br>
-
- <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> 变量: 类型<span class="number">1</span> | 类型<span class="number">2</span> | 类型<span class="number">3</span> .... = 初始值</span><br><span class="line"><span class="keyword">let</span> <span class="attr">arr</span>: (<span class="built_in">number</span> | <span class="built_in">string</span>)[] = [<span class="number">1</span>, <span class="string">&#x27;a&#x27;</span>, <span class="number">3</span>, <span class="string">&#x27;b&#x27;</span>]</span><br></pre></td></tr></table></figure>
-
-<p><br><li><b>2. 类型别名</b><br>字面意思,给(复杂)类型起个别名,自己定义一个类型</p>
- <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> 别名 = 类型</span><br><span class="line"></span><br><span class="line"><span class="comment">// type NewType = string | number</span></span><br><span class="line"><span class="comment">// let a: NewType = 1</span></span><br><span class="line"><span class="comment">// let b: NewType = &#x27;1&#x27;</span></span><br><span class="line"><span class="comment">// let arr: NewType[] = [1, &#x27;1&#x27;]</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">type</span> <span class="title class_">MyArr</span> = (<span class="built_in">number</span> | <span class="built_in">string</span>) []</span><br><span class="line"><span class="keyword">const</span> <span class="attr">arr</span>:<span class="title class_">MyArr</span> = [<span class="number">1</span>, <span class="string">&#x27;1&#x27;</span>]</span><br></pre></td></tr></table></figure>
-
-<p> <br><li><b>3. 函数</b><br> 函数的类型指的是<u>函数参数和返回值</u>的类型</p>
- <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 普通函数</span></span><br><span class="line"><span class="keyword">function</span> 函数名(形参<span class="number">1</span>： 类型=默认值， 形参<span class="number">2</span>：类型=默认值): 返回值类型 &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数</span></span><br><span class="line"><span class="keyword">const</span> 函数名（形参<span class="number">1</span>： 类型=默认值， 形参<span class="number">2</span>：类型=默认值):返回值类型 =&gt; &#123; &#125;</span><br></pre></td></tr></table></figure>
-
-<p><br>当函数参数和返回值都是同一个类型的时候,这样写就有点累累,所有就有了一个又伟大又鸡肋的方法,<b>把函数当成一个整体or自定义其类型</b><br><br></p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 把函数当一个整体</span></span><br><span class="line"><span class="keyword">const</span> add1 : <span class="function">(<span class="params">n1:<span class="built_in">number</span>,n2:<span class="built_in">number</span></span>)=&gt;</span><span class="built_in">number</span>  =  <span class="function">(<span class="params">a,b</span>)=&gt;</span>&#123;<span class="keyword">return</span> a+b &#125;</span><br><span class="line"><span class="comment">// 自定义函数类型</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Fn</span> = <span class="function">(<span class="params">n1:<span class="built_in">number</span>,n2:<span class="built_in">number</span></span>) =&gt;</span><span class="built_in">number</span> </span><br><span class="line"><span class="keyword">const</span> add1 : <span class="title class_">Fn</span> = <span class="function">(<span class="params">a,b</span>)=&gt;</span>&#123;<span class="keyword">return</span> a+b &#125;</span><br></pre></td></tr></table></figure>
-
-<p>感觉不如老老实实写每一个类型呢(小声bb)🥲🥲</p>
-<p>另外,当一个变量需要设置为<u>可选</u>的时,就在变量名后面加一个 ? ,并且,<u>可选参数必须放在必选参数的后面</u></p>
-<li><b>4. void类型 and void和underfine的区别</b>
-<br> 当函数没有返回值时,返回类型就是:void
-一般有三种情况:
-<li> 不写return
-<li> 写return,但是后面没内容
-<li> 写return  underfined
-<br>
-
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果什么都不写，此时，add 函数的返回值类型为： void</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">add</span> = (<span class="params"></span>) =&gt; &#123;&#125;</span><br><span class="line"><span class="comment">// 这种写法是明确指定函数返回值类型为 void，与上面不指定返回值类型相同</span></span><br><span class="line"><span class="keyword">const</span> add = (): <span class="function"><span class="params">void</span> =&gt;</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 但，如果指定 返回值类型为 undefined，此时，函数体中必须显示的 return undefined 才可以</span></span><br><span class="line"><span class="keyword">const</span> add = (): <span class="function"><span class="params">undefined</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 此处，返回的 undefined 是 JS 中的一个值</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">undefined</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><b>void和underfined有什么区别?</b><br>void:</p>
-<li>void 类型是所有类型的子类型,说明任何类型的值都可以赋值给 void 类型的变量
-<li>void 类型通常用作函数返回类型，表示函数不返回任何值（即没有返回值）
-<li> 除了 undefined 和 null，你不能直接赋值任何其他值给 void 类型的变量
-underfined:
-<li>undefined 是 JavaScript 中的一个特殊类型，表示变量已声明但尚未赋值
-<li>undefined 是 void 类型的一个具体值,因此，可以将 undefined 赋值给 void 类型的变量，但不能倒反天罡
-
-<p><br>5. 对象类型–类型别名&#x2F;接口&#x2F;继承</p>
-<p>对象类型的<b>类型别名</b>跟前面的几乎一模一样,也是用到type关键字创建,就不写了</p>
-<p>当一个对象被多次使用时,除了用类型别名type,还可以用<b>接口</b> interface 关键字,声明接口后,就直接用接口名称作为变量类型<br><br></p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> 接口名  &#123;</span><br><span class="line">    属性<span class="number">1</span>: 类型<span class="number">1</span>, 属性<span class="number">2</span>: 类型<span class="number">2</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// eg</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IGoodItem</span>  &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="built_in">string</span>, <span class="attr">price</span>: <span class="built_in">number</span>, <span class="attr">func</span>: <span class="function">()=&gt;</span><span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="attr">good1</span>: <span class="title class_">IGoodItem</span> = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;手表&#x27;</span>,</span><br><span class="line">    <span class="attr">price</span>: <span class="number">200</span>,</span><br><span class="line">    <span class="attr">func</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;看时间&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><br><b>那接口和类型别名有什么区别?</b></p>
-<li>同:都可以给对象指定类型
-<li>异:正如前面提到的type还可以用来给普通的类型指定别名,但是接口只能为对象指定类型
-
-<p>ok,对象复用解决了,那属性复用呢?<br>当然是<b>接口继承</b></p>
-<p>继承的时候,可以把复用的属性抽离出来,重新用接口定义一个,然后通过继承 extends 来实现复用,继承过后,继承后，Point3D 就有了 Point2D 的所有属性和方法(此时，Point3D 同时有 x、y、z 三个属性)</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Point2D</span> &#123; <span class="attr">x</span>: <span class="built_in">number</span>; <span class="attr">y</span>: <span class="built_in">number</span> &#125;</span><br><span class="line"><span class="comment">// 继承 Point2D</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Point3D</span> <span class="keyword">extends</span> <span class="title class_">Point2D</span> &#123;</span><br><span class="line">  <span class="attr">z</span>: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其他类型就不说了,然后再看看<b>泛型</b></p>
-<h4 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h4><p>泛型的特点是,传入什么类型的数据就传出什么类型的的数据–参数和返回值类型相同<br><br>异常的熟悉啊,上面函数定义的时候就是这样,要不怎么说上面那个不行呢😈😈<br><br>例如：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params">value: <span class="built_in">number</span></span>): <span class="built_in">number</span> &#123; <span class="keyword">return</span> value &#125;</span><br></pre></td></tr></table></figure>
-
-<p><br>比如，fn(10) 调用以上函数就会直接返回 10 本身<br>但是，该函数声明只接收数值类型，无法用于其他类型,那如果换成any可以吗?<br>好吧,其实不行,换成any就没有了类型保护，也没有严格限制返回值的类型和输入值的类型一致<br><br>ok 搬出伟大的泛型🍡🍡<br><br>泛型，顾名思义，就是可以适用于多个类型，使用类型变量比如T帮助我们捕获传入的类型，之后我们就可以继续使用这个类型啦</p>
-<p><br>它本质是参数化类型，通俗的将就是所操作的数据类型被指定为一个参数，这种参数类型可以用在类、接口和函数的创建中，分别成为<b>泛型类，泛型接口、泛型函数</b><br><br></p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> fn&lt;T&gt;(<span class="attr">value</span>: T): T &#123; <span class="keyword">return</span> value &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> num = fn&lt;<span class="built_in">number</span>&gt;(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">const</span> str = fn&lt;<span class="built_in">string</span>&gt;(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><br>语法：在函数名称后面de &lt;&gt;，中添加类型变量，比如此处的 T</p>
-<li>类型变量 T，是一种特殊类型的变量，它处理类型而不是值
-<li>该类型变量相当于一个类型容器，能够捕获用户提供的类型(具体是什么类型由用户调用该函数时指定)
-<li>因为 Type 是类型，因此可以将其作为函数参数和返回值的类型，表示参数和返回值具有相同的类型
-<li>类型变量 Type，可以是任意合法的变量名称
-
-
-<p><br>然后,在使用泛型函数时,<b>可以省略 &lt;类型&gt; 来简化泛型函数的调用</b></p>
-<li>此时，TS 内部会采用一种叫做类型参数推断的机制，来根据传入的实参自动推断出类型变量 Type 的类型
-<li>比如，传入实参 10，TS 会自动推断出变量 num 的类型 number，并作为 Type 的类型
-<li>推荐：使用这种简化的方式调用泛型函数，使代码更短，更易于阅读
-<li>说明：当编译器无法推断类型或者推断的类型不准确时，就需要显式地传入类型参数
-
-<p><b><br>泛型约束</b><br>默认情况下，泛型函数的类型变量 T 可以代表多个类型，这导致无法访问任何属性</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> fn&lt;T&gt;(<span class="attr">value</span>: T): T &#123;</span><br><span class="line">  <span class="comment">// 这里value. 不会有提示</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(value.<span class="property">length</span>)<span class="comment">// 这里会报错</span></span><br><span class="line">  <span class="keyword">return</span> value</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">fn</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<li>比如，fn(‘a’) 调用函数时获取参数的长度：
-<li>Type 可以代表任意类型，无法保证一定存在 length 属性，比如 number 类型就没有 length
-<li>此时，就需要为泛型添加约束来收缩类型(缩窄类型取值范围)
-
-<p><br><b>好,那怎么添加约束?</b></p>
-<ol>
-<li>指定更具体的类型</li>
-<li>添加约束</li>
-</ol>
-<p>比如，要求传入T类型必须要有length属性</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个接口</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">ILength</span> &#123; <span class="attr">length</span>: <span class="built_in">number</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// T extends ILength 添加泛型约束</span></span><br><span class="line"><span class="keyword">function</span> fn&lt;T <span class="keyword">extends</span> <span class="title class_">ILength</span>&gt;(<span class="attr">value</span>: T): T &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(value.<span class="property">length</span>)</span><br><span class="line">  <span class="keyword">return</span> value</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">fn</span>(<span class="string">&#x27;abc&#x27;</span>) <span class="comment">// Ok</span></span><br><span class="line"><span class="title function_">fn</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]) <span class="comment">// Ok</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/05/17/TS-node/" data-id="clwakc3ll0000k84hg4twgexf" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hooks-usecallback" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/03/17/hooks-usecallback/" class="article-date">
-  <time class="dt-published" datetime="2024-03-17T07:13:37.095Z" itemprop="datePublished">2024-03-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="hooks-usecallback与React-memo的扯皮"><a href="#hooks-usecallback与React-memo的扯皮" class="headerlink" title="hooks-usecallback与React.memo的扯皮"></a>hooks-usecallback与React.memo的扯皮</h1><p>熟悉的一集&#x2F;历史总是惊人的相似</p>
-<p>因为上次写useEffect很多例子用到usecallback来改(函数式更新)，然后我就顺藤摸瓜，去看了一点点点点点点点useCallback</p>
-<p>然后又顺藤摸瓜，摸到了React.memo</p>
-<h5 id="首先，浅浅回忆一下"><a href="#首先，浅浅回忆一下" class="headerlink" title="首先，浅浅回忆一下"></a>首先，浅浅回忆一下</h5><p>useCallback—用于缓存需要在组件中多次调用的回调函数。</p>
-<p><br>它接受两个参数：<u>回调函数和依赖数组</u>。（和useEffect相似率高达%99.9）</p>
-<p>当依赖数组中的任何一个值发生变化时，useCallback 将会返回一个新的回调函数，否则将会返回<u>之前缓存的回调函数</u></p>
-<p>just be like</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> handleClick = <span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Button clicked!&#x27;</span>);</span><br><span class="line">    <span class="comment">// useCallback缓存一个回调函数handleClick</span></span><br><span class="line">  &#125;, []); </span><br><span class="line">  <span class="comment">// 依赖数组为空，只在组件挂载时渲染一次，并且组件更新时不会重新创建，因此 handleClick 变量将会指向同一个回调函数，从而避免了在组件重新渲染时重新创建函数对象</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> handleClick = <span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">setCount</span>(count + <span class="number">1</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Clicked <span class="subst">$&#123;count&#125;</span> times`</span>);</span><br><span class="line">  &#125;, [count]); </span><br><span class="line"><span class="comment">// 因此每次状态改变时都会生成一个新的回调函数。</span></span><br><span class="line"> </span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>————————————————<br><br></p>
-<h2 id="ok了家人们-进-入-正-题"><a href="#ok了家人们-进-入-正-题" class="headerlink" title="ok了家人们  进 入 正 题"></a>ok了家人们  进 入 正 题</h2><li><b>useCallback 作为一个缓存工具，既然这么好用为什么不每个函数都套一个useCallback？将每一个函数都缓存不是可以更好的提升性能，内存泄漏退退退咯？</b>
-
-<p><br>想的挺好，但是恭喜你，不行……<br>useCallBack是一个缓存工具没错 但实际上他<mark>并不能阻止函数都重现构建</mark></p>
-<p><br>举个栗子<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">//function1包裹了useCallBack的函数</span></span><br><span class="line">    <span class="keyword">const</span> function1 = <span class="title function_">useCallBack</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;function1&#x27;</span>);</span><br><span class="line">    &#125;,[])</span><br><span class="line">    </span><br><span class="line">     <span class="comment">//function2没有包裹useCallBack的函数</span></span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">function2</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;function2&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>( </span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">        )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><br>是不是认为当组件重新渲染的时候，只有functon2（没有使用useCallBack的函数）函数会被重新构建，而function1（使用了useCallBack的函数）函数不会被重新构建，那就不太对咯</p>
-<p><br>实际上，被useCallBack包裹了的函数也会被重新构建并当成useCallBack函数的实参传入</p>
-<p><br><u>useCallBack 仅缓存函数的引用，而不是函数的实现</u>，它的本质工作不是在依赖不变的情况下阻止函数创建，而是在依赖不变的情况下不返回新的函数地址而返回旧的函数地址</p>
-<p><br>所以说，<mark>不论是否使用useCallBack都无法阻止组件render时函数的重新创建</mark></p>
-<p><br>每一个被useCallBack的函数都将被加入useCallBack内部的管理队列</p>
-<p><br>而当我们大量使用useCallBack的时候，管理队列中的函数会非常之多，任何一个使用了useCallBack的组件重新渲染的时候都需要去遍历useCallBack内部所有被管理的函数，找到需要校验依赖是否改变的函数，并进行校验</p>
-<p><br>在这个过程中，寻找指定函数需要性能，校验也需要性能</p>
-<p><br>所以，滥用useCallBack不但不能阻止函数重新构建还会增加“寻找指定函数和校验依赖是否改变”这两个功能，去增添一些不必要的负担<br>————————————————<br><br><br>好的，那么问题又出现了</p>
-<h3 id="到底什么情况下使用useCallback思密达？"><a href="#到底什么情况下使用useCallback思密达？" class="headerlink" title="到底什么情况下使用useCallback思密达？"></a>到底什么情况下使用useCallback思密达？</h3><li><b>在往子组件传入了一个函数并且子组件被React.momo缓存了的时候使用</b>
-
-<p><br>React.memo()，一种缓存技术+1+1+1</p>
-<p><br>简单说，React.memo()是通过校验props中的<u>数据是否改变</u>的来决定组件是否需要重新渲染的一种缓存技术</p>
-<p><br><b>具体点说React.memo()其实是通过校验Props中的<mark>数据的内存地址是否改变</mark>来决定组件是否重新渲染组件的一种技术</b></p>
-<p><br>假设我们往子组件传入一个<u>函数</u>呢？</p>
-<p><br>当父组件的其他State（与子组件无关的）改变的时候,因为状态的改变，父组件需要重新渲染，那被React.memo保护的子组件是否会被重新构建呢？</p>
-<p><br>举个栗子*3<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">Parent</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="comment">//父组件的state</span></span><br><span class="line">    <span class="keyword">const</span> [parentState,setParentState] = <span class="title function_">useState</span>(<span class="number">0</span>);  </span><br><span class="line">    </span><br><span class="line">    <span class="comment">//需要传入子组件的函数</span></span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">toChildFun</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我传传传传传传传&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">          <span class="language-xml"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setParentState(val =&gt; val+1)&#125;&gt;<span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span></span><br><span class="line">          <span class="comment">//将父组件的函数传入子组件</span></span><br><span class="line">          <span class="language-xml"><span class="tag">&lt;<span class="name">Child</span> <span class="attr">function</span>=<span class="string">&#123;toChildFun&#125;</span>&gt;</span><span class="tag">&lt;/<span class="name">Child</span>&gt;</span></span></span><br><span class="line">        &lt;div&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 被usememo套着的子组件</span></span><br><span class="line">    <span class="keyword">const</span> <span class="title class_">Child</span> = <span class="title function_">memo</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">         <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我打印打印打印打印打印&quot;</span>)</span><br><span class="line">         <span class="keyword">return</span> &lt;div&gt;&lt;div&gt;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
-
-<p><br>问:当我点击父组件中的Button改变父组件中的state,子组件会不会重新渲染</p>
-<p><br>乍一看，改变的是parentState这个变量，和子组件半毛钱关系没有，子组件还被React.memo保护着，好像是不会被重新渲染</p>
-<p><br>但这里的问题是，如果传进去的是其他变量，那应该可以，但是传入的是函数，那就不行咯，是会重新渲染滴</p>
-<p><br><b>因为</b></p>
-<p><br><u>React.memo检测的是props中数据的栈地址是否改变</u>而父组件重新构建的时候，会重新构建父组件中的所有函数（旧函数销毁，新函数创建，等于更新了函数地址）,新的函数地址传入到子组件中被props检测到它的地址更新了,就引发了子组件的重新渲染</p>
-<h4 id="没事-搬上useCallback"><a href="#没事-搬上useCallback" class="headerlink" title="没事 搬上useCallback"></a>没事 搬上useCallback</h4><p>使用useCallBack套一下需要传入子组件的那个函数</p>
-<p><br>那样的话，父组件重新渲染，子组件中的函数就会因为被useCallBack保护而<mark>返回旧的函数地址</mark>，子组件就不会检测成地址变化，也就不会重选渲染。<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">Parent</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> [parentState,setParentState] = <span class="title function_">useState</span>(<span class="number">0</span>);  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> toChildFun = <span class="title function_">useCallBack</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我传传传传传传传&quot;</span>);</span><br><span class="line">    &#125;,[])</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (&lt;div&gt;</span><br><span class="line">          <span class="language-xml"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setParentState(val =&gt; val+1)&#125;&gt;</span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span></span><br><span class="line">          <span class="comment">//将父组件的函数传入子组件</span></span><br><span class="line">          <span class="language-xml"><span class="tag">&lt;<span class="name">Child</span> <span class="attr">function</span>=<span class="string">&#123;toChildFun&#125;</span>&gt;</span><span class="tag">&lt;/<span class="name">Child</span>&gt;</span></span></span><br><span class="line">    &lt;div&gt;)</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**被memo保护的子组件**/</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Child</span> = <span class="title function_">memo</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我打印打印打印打印打印&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> &lt;div&gt;&lt;div&gt;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>————————————————</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/17/hooks-usecallback/" data-id="cltv6li9r0000e44h75bgffaq" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hook-useeffect" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/03/02/hook-useeffect/" class="article-date">
-  <time class="dt-published" datetime="2024-03-02T07:15:36.880Z" itemprop="datePublished">2024-03-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="React-hookssssss"><a href="#React-hookssssss" class="headerlink" title="React-hookssssss"></a>React-hookssssss</h1><h2 id="useEffect"><a href="#useEffect" class="headerlink" title="useEffect"></a>useEffect</h2><p>稍稍看了一眼useffect，发现这玩意怎么这么多事儿呢？？？烦！</p>
-<p>useeffect——用于处理<b>副作用操作</b></p>
-<p>副作用就是在组件渲染过程中，<b>可能对外部环境产生影响的操作</b>，比如数据获取、订阅事件、操作DOM节点等。</p>
-<p>啊啊啊啊啊啊？</p>
-<p>比如说：监听窗口大小变化、键盘事件等，操作可能会导致内存泄泄露，因为订阅的事件处理器如果不被正确清理，就会一直占用内存</p>
-<p>useEffect接受两个参数：一个副作用函数、一个依赖数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">useEffect</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="comment">// 副作用函数</span></span><br><span class="line">    <span class="comment">// 在组件渲染时执行</span></span><br><span class="line">    <span class="comment">// 可以进行副作用操作</span></span><br><span class="line">&#125;,[依赖])</span><br></pre></td></tr></table></figure>
-
-<p>副作用函数会在组件渲染时执行，并且在每次组件更新后也会执行。</p>
-<p>如果依赖数组不为空，并且依赖数组中的值发生变化时，副作用函数也会被重新执行。</p>
-<p>如果依赖数组为空，则副作用函数只会在组件渲染时执行一次。</p>
-<h3 id="一些常见用法？"><a href="#一些常见用法？" class="headerlink" title="一些常见用法？"></a>一些常见用法？</h3><p>（虽然但是，有些对我来说不是太常见…）</p>
-<li><b>依赖数组为空，只会执行一次</b>
-
-<p><br>这个很简单，字面意思，跳过</p>
-<p><br><li><b>依赖数组发生变化，副作用函数重新执行</b><br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [count,setCount]=<span class="title function_">useState</span>(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="title function_">useEffect</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(count)</span><br><span class="line">&#125;,[count])</span><br></pre></td></tr></table></figure>
-
-<p><br>count这个状态发生变化，那他就会打印打印打印打印打印打印打印…但是这个例子可能会出问题，待会就知道咯</p>
-<p><br><li><b>清除副作用操作：副作用函数可以返回一个清除函数，用于清楚副作用操作</b></p>
-<p><br>比如说，前面的取消订阅或者清除定时器等等等等</p>
-<p><br>举个栗子吧<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> timer = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hello&#x27;</span>);</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 返回清除函数</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">clearInterval</span>(timer);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;, []);</span><br></pre></td></tr></table></figure>
-
-
-<p>首先，组件每渲染一次，它就执行一次</p>
-<p><br>在useeffect内部使用<u>setInterval</u>来创建一个定时器,这个定时器会每隔1000毫秒（1秒）执行一次回调函数,打印一个”Hello”</p>
-<p><br>当组件卸载时，React会调用这个清除函数<u>clearInterval(timer)</u>来清理定时器，防止内存泄漏&#x2F;防止它继续执行</p>
-<p><br><li><b>异步操作：副作用函数可以是一个异步函数，可以在其中进行异步操作，比如说-数据获取</b></li><br><br>再举个栗子吧</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> [cinemaList, setCinemaList] = <span class="title function_">useState</span>([]);</span><br><span class="line"></span><br><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">axios</span>(&#123;</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&quot;https://m.maizuo.com/gateway?cityId=110100&amp;ticketFlag=1&amp;k=4493841&quot;</span>,</span><br><span class="line">        <span class="attr">headers</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;X-Client-Info&#x27;</span>: <span class="string">&#x27;&#123; &quot;a&quot;: &quot;3000&quot;, &quot;ch&quot;: &quot;1002&quot;, &quot;v&quot;: &quot;5.2.1&quot;, &quot;e&quot;: &quot;17059769054738555813298177&quot;, &quot;bc&quot;: &quot;110100&quot; &#125;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;X-Host&#x27;</span>: <span class="string">&#x27;mall.film-ticket.cinema.list&#x27;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span></span><br><span class="line">    &#125;).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">data</span>)</span><br><span class="line">        <span class="title function_">setCinemaList</span>(res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">cinemas</span>)</span><br><span class="line">    &#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(err)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;, [])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>这是之前练习的请求的  卖座  的数据</p>
-<p><u>axios</u>调用是异步的，它会在发送请求后立即继续执行后续代码，而不会等待响应</p>
-<p>当响应返回时，then 块会被执行，这时才会设置状态</p>
-<p>还有一个栗子！</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">fetchData</span> = <span class="keyword">async</span> (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">&#x27;https://api.example.com/data&#x27;</span>);</span><br><span class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> response.<span class="title function_">json</span>();</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">fetchData</span>();</span><br><span class="line">&#125;, []);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><br><b>需要注意的是</b>，副作用函数不能直接返回一个Promise，如果需要在副作用函数中使用Promise，可以在函数内部定义一个异步函数，并在该函数中使用Promise</p>
-<h3 id="也许可能大概maybe？会遇到的情况？？"><a href="#也许可能大概maybe？会遇到的情况？？" class="headerlink" title="也许可能大概maybe？会遇到的情况？？"></a>也许可能大概maybe？会遇到的情况？？</h3><li><b>依赖数组元素是一个 -对象/数组：</b>
-
-<p><br>也许我们会在状态中使用了一个对象&#x2F;数组，并且希望在对象&#x2F;数组的属性发生变化时可以执行副作用函数</p>
-<p><br>但但但是，如果依赖数组中的元素是一个对象或数组，<mark>只有当引用发生变化时</mark>，useEffect才会重新执行</p>
-<p><br>所以，如果只是修改了对象或数组的属性，引用没有发生变化，useEffect是没有办法感知到这个变化滴</p>
-<p><br>？？？？那怎么办，在线等，急！！！</p>
-<p><br>为了确保在修改对象或数组的属性时，同时也修改了对象或数组的引用，可以<mark>使用展开运算符</mark>{ …data, age: 20 }来创建一个新的对象</p>
-<p><br>或者可以<mark>使用函数式更新</mark>来更新状态，这样可以确保在useEffect中获取到的是最新的状态值</p>
-<p><br>举个栗子吧<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [user, setUser] = <span class="title function_">useState</span>(&#123; <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>, <span class="attr">age</span>: <span class="number">25</span> &#125;);</span><br><span class="line"></span><br><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">setUser</span>(<span class="function"><span class="params">prevUser</span> =&gt;</span> (&#123; ...prevUser, <span class="attr">age</span>: <span class="number">26</span> &#125;));</span><br><span class="line">&#125;, [setUser]);</span><br></pre></td></tr></table></figure>
-
-<p>这里使用了展开运算符  …  来<mark>创建一个新的对象</mark>，其中包含了所有原始属性以及新的<u>age</u>属性</p>
-<p><br>所以，即使我只改变了<u>age</u>属性，由于引用了一个新的对象，React也会认为状态已经改变，并重新执行useEffect<br><br>————————————————<br><br></p>
-<li><b>依赖数组元素是一个 -闭包变量：</b>
-
-<p><br>可能我们会在副作用函数中使用了一个闭包变量，并且希望在闭包变量发生变化时执行副作用函数</p>
-<p><br>但是，事情没那么简单，如果依赖数组中的元素是一个闭包变量，那么在<mark>每次组件渲染时闭包变量都会被捕获，React会记住它在副作用函数被创建时的值</mark></p>
-<p><br>因此，熟悉的一幕又发生了，即使闭包变量的值发生了变化，useEffect也是无法感知到这个变化的</p>
-<p><br>没关系，<mark>函数式更新</mark>嘎嘎好用</p>
-<p><br>zhaizhaizhai举个栗子吧<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;副作用函数执行了&#x27;</span>);</span><br><span class="line">  <span class="comment">// 这里使用了一个闭包变量count</span></span><br><span class="line">&#125;, [count]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 假设有一个按钮，点击时增加count的值</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setCount(count + 1)&#125;&gt;增加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p><br>在这个例子中，每次点击按钮时，<u>count</u>的值都会增加，但是useEffect并不会重新执行</p>
-<p><br>（因为React在useEffect第一次执行时捕获了<u>count</u>的值，即使<u>count</u>的值在组件内部发生了变化，React也不会认为<u>count</u>的值已经改变，因此不会重新执行副作用函数）</p>
-<p><br>别急，搬上我们的函数式更新，<mark>使每次<u>count</u>变化时都创建一个新的函数</mark>，这样React就能检测到变化并重新执行副作用函数咯<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用函数式更新来确保每次更新时都创建一个新的函数</span></span><br><span class="line"><span class="keyword">const</span> incrementCount = <span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">setCount</span>(<span class="function"><span class="params">prevCount</span> =&gt;</span> prevCount + <span class="number">1</span>);</span><br><span class="line">&#125;, []);</span><br><span class="line"></span><br><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 使用incrementCount函数来更新count状态</span></span><br><span class="line">  <span class="title function_">incrementCount</span>();</span><br><span class="line">&#125;, [incrementCount]);</span><br></pre></td></tr></table></figure>
-
-<p><br>使用一个<u>useCallback</u>钩子来创建一个记忆化的函数<u>incrementCount</u></p>
-<p><br>这个函数会在<u>count</u>状态更新时重新生成，确保useEffect能够获取到最新的<u>incrementCount</u>函数</p>
-<p><br>这样，只要<u>count</u>的值在组件内部发生了变化，useEffect就会重新执行</p>
-<p><br>————————————————<br><br></p>
-<li><b>依赖数组元素是一个 -函数：</b>
-
-
-<p><br>在副作用函数中使用了一个函数时，我们希望在函数发生变化时才执行副作用函数</p>
-<p><br>但事情好像没有那么简单哦</p>
-<p><br>因为在JavaScript中，<mark>函数是对象</mark></p>
-<p><br>每次函数定义时都会创建一个新的函数对象。因此，即使函数的逻辑没有变化，只要<mark>函数定义发生了变化</mark>（例如，重新定义了同一个函数），函数对象的引用就会改变</p>
-<p><br>React的useEffect依赖数组会检测到这种引用变化，<mark>并认为这是一个新的函数</mark>，从而重新执行副作用函数，就触发了一些不必要的执行<br><br>就像这样</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 假设这是一个外部定义的函数</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">someFunction</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;函数执行了&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 每次组件渲染时，someFunction的引用都会变化，因为每次渲染都会重新定义它</span></span><br><span class="line">  <span class="title function_">someFunction</span>();</span><br><span class="line">&#125;, [someFunction]);</span><br></pre></td></tr></table></figure>
-
-<p><br>可以像上个例子那样使用useCallback钩子来记忆化函数，<mark>确保函数在组件重新渲染时不会重新定义</mark>，除非它的依赖项发生了变化</p>
-<p><br>–就–像–这–样–咯–<br><br></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用useCallback来记忆化函数</span></span><br><span class="line"><span class="keyword">const</span> someFunction = <span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;函数执行了&#x27;</span>);</span><br><span class="line">&#125;, []);</span><br><span class="line"></span><br><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">someFunction</span>();</span><br><span class="line">&#125;, [someFunction]);</span><br></pre></td></tr></table></figure>
-
-<p><u>someFunction</u>被useCallback钩子记忆化了，这就意味着它只会在组件挂载时定义一次</p>
-<p><br>除非它的依赖项数组发生变化，这样，useEffect只会在<u>someFunction</u>的函数逻辑变化时才会重新执行咯</p>
-<p><br>————————————————</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/02/hook-useeffect/" data-id="clt9r27nd0000044hhyqcgatp" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-closure" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/12/10/closure/" class="article-date">
-  <time class="dt-published" datetime="2023-12-10T09:01:56.247Z" itemprop="datePublished">2023-12-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="closure"><a href="#closure" class="headerlink" title="closure"></a>closure</h1><h4 id="什么是闭包？"><a href="#什么是闭包？" class="headerlink" title="什么是闭包？"></a>什么是闭包？</h4><p>闭包是函数和周围状态（词法环境）的组合，也就是说闭包可以访问外层函数的作用域</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">outer</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>)&#123;</span><br><span class="line">     <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="title function_">f</span>()</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">outer</span>()</span><br></pre></td></tr></table></figure>
-<p>局部变量和内层函数组成闭包</p>
-<h5 id="1—1作用域or作用域链"><a href="#1—1作用域or作用域链" class="headerlink" title="1—1作用域or作用域链"></a>1—1作用域or作用域链</h5><p>运行代码是就会形成执行环境（执行上下文）分别为：全局环境、函数环境、eval环境<br>执行上下文分为：创建阶段（作用域链、变量对象、this）和执行阶段（变量赋值、函数引用）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">books</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> book=<span class="string">&quot;书包里的书本&quot;</span>；</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(book);</span><br></pre></td></tr></table></figure>
-<p>报错就是因为全局中没有book变量，book变量在books函数的作用域中</p>
-<h6 id="再举个栗子-闭包可以使用父函数的局部变量"><a href="#再举个栗子-闭包可以使用父函数的局部变量" class="headerlink" title="再举个栗子-闭包可以使用父函数的局部变量"></a>再举个栗子-闭包可以使用父函数的局部变量</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">books</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> book=<span class="string">&quot;书包里的书本&quot;</span>；</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(book);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> bag=<span class="title function_">books</span>();</span><br><span class="line"><span class="title function_">bag</span>();</span><br></pre></td></tr></table></figure>
-<p>首先全局执行上下文，然后执行bag进入books函数，然后再进入内层函数，但由于它本身没有book变量，于是访问父函数books的变量book，从而输出“书包里的书包”</p>
-<h5 id="1-2生存周期and内存泄露"><a href="#1-2生存周期and内存泄露" class="headerlink" title="1-2生存周期and内存泄露"></a>1-2生存周期and内存泄露</h5><h6 id="闭包会保存所有父级函数，会延长外层局部变量的生存周期"><a href="#闭包会保存所有父级函数，会延长外层局部变量的生存周期" class="headerlink" title="闭包会保存所有父级函数，会延长外层局部变量的生存周期"></a>闭包会保存所有父级函数，会延长外层局部变量的生存周期</h6><p>js通过引用计数机制决定一个变量在函数结束后是否被回收</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">show</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> str = <span class="string">&#x27;书本本本本本本&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">document</span>.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(str);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">show</span>()</span><br></pre></td></tr></table></figure>
-<p>执行完后，由于onclick函数还在，那么它外层的局部变量str就仍然存在并没有被回收</p>
-<h6 id="如果是这样的："><a href="#如果是这样的：" class="headerlink" title="如果是这样的："></a>如果是这样的：</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">show</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> str = <span class="string">&#x27;书本本本本本本&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">document</span>.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(str);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">show</span>()</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">onclick</span>=<span class="attr">null</span>:</span><br></pre></td></tr></table></figure>
-<p>在执行完函数show后引用计数为1，但当document.onclick&#x3D;null后，引用计数则减一变为零，此时a就被标记为“可回收”</p>
-<h6 id="再举个栗子-内存泄漏"><a href="#再举个栗子-内存泄漏" class="headerlink" title="再举个栗子-内存泄漏"></a>再举个栗子-内存泄漏</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">let</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">fun</span>(<span class="params"></span>)&#123;</span><br><span class="line">        count++;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;函数被调用了$&#123;count&#125;次&quot;</span>)；</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fun</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
-<p>result是一个全局变量，再代码执行结束后不会立即回收，层层回溯，count被引用，所以count不会被回收，那它就会占据内存空间导致内存泄漏</p>
-<p>最后，简单来说，只要访问了父函数的局部变量，都算是“用到了”闭包</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/10/closure/" data-id="clpz24ia600001c4h9z3s3w5q" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/11/20/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-11-20T15:15:02.087Z" itemprop="datePublished">2023-11-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/20/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/20/hello-world/" data-id="clp801esr0000mo4hczfhea2n" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/07/28/npm-yarn-pnpm/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2024/07/21/Component%20extraction/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2024/05/24/websoket/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2024/05/17/TS-node/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2024/03/17/hooks-usecallback/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
+  </body>
 </html>
