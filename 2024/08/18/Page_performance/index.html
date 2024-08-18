@@ -144,7 +144,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2024-08-18 22:17:42
+          2024-08-18 22:26:16
         </span>
         
       </div>
@@ -189,9 +189,9 @@
 在左上角条形图中，每一列表示一次commit，颜色越深、条形越高表示耗时越，当前选中的为黑色
 如果 profile 的记录时间很长，渲染次数就会很多，但其中也有很多耗时很短的、不用查看的的数据，此时通过 profiler 一个筛选功能，用它来制定一个时间阀值，之后 profiler 会隐藏所有比这个阀值更快的 commit
 
-<p><img src="/image-6.png" alt="Alt text"></p>
+<p><img src="https://pic.imge.cc/2024/08/18/66c203d409fdf.png" alt="image-6.png"></p>
 <p><b>火焰图</b><br>右侧一行一行数据图就是所选中 commit 的信息，图中每一列代表一个 React component ，各列的尺寸和颜色表示这列所代表的 component 及其 children 的渲染时间，列的宽度表示该 component 最近一次渲染所花费的时间（有可能是这一次&#x2F;上一次&#x2F;上上一次…），列的颜色代表在该次 commit 中渲染所花费的时间，黄色耗时长蓝色耗时短，若 commit 没有在这次重新渲染，则该 component 为灰色<br><br>举个例子，上图中所展示的 commit 总共渲染耗时为 18.4 ms，即：Router component 在本次渲染中花费了 18.4 ms，而它所花费的时间大部分在两个 children 上：Nav（8.4 ms）和 Route (7.9 ms)，剩下的时间用于它的其他 children 和它自身的渲染<br><br>当选中一个 component 时，它的具体信息将会展示在右边的数据列，列里会展示该 component 在这次 commit 时的 props 和 state，可以去深入研究这些数据来找出这次 commit 具体做了哪些<br><br>至于为什么叫火焰图，我猜是因为 component 和它的 children 连起来看有一点点像火焰&#x2F;火苗<br><br><b>排序图</b><br><br>同火焰图一样，排序图也会展示你所指定的那一次 commit 的信息，图中每一列都代表了一个 React component ，不同的是排序图是有顺序的，耗时最长的 component 会展示在第一行，并且只会展示在本次 commit 中被触发重绘的 component</p>
-<p><img src="/image-7.png" alt="Alt text"></p>
+<p><img src="https://pic.imge.cc/2024/08/18/66c203f9b74fb.png" alt="image-7.png"></p>
 <p><br>其实还有<code>Performance API</code>一组可以精确测量和分析运行时性能的 web API，是上述性能指标监控数据的关键来源（看了看没懂，就没写了🥲）</p>
 
       </div>
@@ -208,7 +208,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2024-08-18 22:17:42
+              2024-08-18 22:26:16
             </span>
             
           </div>
