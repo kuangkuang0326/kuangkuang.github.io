@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="John Doe" />
+  <!-- Open Graph Description 简短摘要-->
+  
+  <!-- 用于搜索引擎的文章摘要 -->
+  
+  
+  
+  <title>
+    
+     Hexo
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/avatar.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/dog.jpg" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">kuangkuang0326</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title"></div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2024-08-18 22:12:04
+        </span>
+        
+      </div>
+      <div class="markdown-body">
+        <hr>
+<h2 id="title：页面性能指标及其观测法"><a href="#title：页面性能指标及其观测法" class="headerlink" title="title：页面性能指标及其观测法"></a>title：页面性能指标及其观测法</h2><h1 id="页面性能指标及其观测法"><a href="#页面性能指标及其观测法" class="headerlink" title="页面性能指标及其观测法"></a>页面性能指标及其观测法</h1><p><br>在互联网早期，网页相对简单，主要由文本和静态图像组成。随着技术的发展，网页开始包含更多的动态内容、多媒体元素和复杂的交互功能。这导致网页加载时间变长，用户等待时间增加，因此需要性能指标来衡量和优化用户体验<br><br>在页面性能指标成为标准化的度量工具之前，开发者主要依靠一些基本的指标和经验法则来优化网页，例如使用缓存、减少HTTP请求数量 等。这些基本指标或许可以看作是页面性能指标的前身<br><br>最初，我们使用 <code>DomContentLoaded</code> <code>Load</code> 这些衡量文档加载进度的指标（<code>DOMContentLoaded在</code> HTML 文档本解析之后触发,而<code>load</code>是在 HTML 所有相关资源被加载完成后触发）但它们不能直接反应用户视觉体验<br><br>为了能衡量用户视觉体验，Web 标准中定义了一些性能指标，这些性能指标被各大浏览器标准化实现，例如<code>First Paint</code>和<code>First Contentful Paint</code>还有一些由 Web 孵化器社区组（WICG）提出的性能指标，如 <code>Largest Contentful Paint</code> <code>Time to Interactive</code> 另外还有 Google 提出 <code>First Meaningful Paint</code> <code>Speed Index</code>百度提出的<code>First Screen Paint</code></p>
+<h2 id="基于用户体验的性能指标"><a href="#基于用户体验的性能指标" class="headerlink" title="基于用户体验的性能指标"></a>基于用户体验的性能指标</h2><h3 id="LCP-Largest-Contentful-Paint"><a href="#LCP-Largest-Contentful-Paint" class="headerlink" title="LCP-Largest Contentful Paint"></a>LCP-Largest Contentful Paint</h3><p><b>最大内容绘制</b>:可视区域中最大的内容元素呈现到屏幕上的时间，用以估算页面的主要内容对用户可见时间。可能需要考虑到<code>img</code>元素、通过<code>url()</code>加载的背景图片、包含文本节点或者其他内联级文本元素子级的块级元素等，主要受服务器响应速度、JavaScript和CSS渲染阻塞、资源加载时间等影响<br><br>比如说行内的块级元素可能会影响布局、溢出、脱离文本流等，内联元素通常用于文本内的小部分内容，而块级元素用于定义结构和布局，颠倒过来的话可能就会更耗时</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;display: inline-block;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;heavy-image.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Heavy Image&quot;</span>&gt;</span></span><br><span class="line">    一些文本内容</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><br>在这个例子中，浏览器首先解析 html 文件，依次遇到<code>span</code> <code>div</code>等，构建 DOM 节点，然后下载图片，如果图片比较大可能也会耗时，并且<code>inline-block</code>元素是可以设置宽度和高度的，在解析 css 文件时浏览器需重新计算元素的尺寸并布局。针对这个例子的话可以使用图片懒加载（虽然但是，这个标签的影响感觉上还是比较小的，图片可能会更大…<br><br>通常，为了提供良好的用户体验，网站应 2.5 秒或更短时间内完成“最大内容绘制”<li><a target="_blank" rel="noopener" href="https://web.dev/optimize-lcp/">https://web.dev/optimize-lcp/</a></p>
+<h3 id="FCP-First-Contentful-Paint"><a href="#FCP-First-Contentful-Paint" class="headerlink" title="FCP-First Contentful Paint"></a>FCP-First Contentful Paint</h3><p><b>首次内容绘制</b>：浏览器首次绘制来自 DOM 的内容的时间，内容必须是文本、图片（包含背景图）、非白色的 canvas 或 SVG，也包括带有正在加载中的 Web 字体的文本，是用户第一次开始看到页面内容，但仅仅有内容，并不意味着它是有用的内容（例如 Header、导航栏等），它指的是 html 中的 dom 渲染完成之后的时间, 后续动态创建的不管，一般在 0-2 秒内完成比较好，超过 4 秒就属于比较慢的了<br><br><li><a target="_blank" rel="noopener" href="https://web.dev/fcp/#how-to-improve-fcp">https://web.dev/fcp/#how-to-improve-fcp</a></p>
+<h3 id="CLS-Cumulative-Layout-Shift"><a href="#CLS-Cumulative-Layout-Shift" class="headerlink" title="CLS-Cumulative Layout Shift"></a>CLS-Cumulative Layout Shift</h3><p><b>累计布局偏移</b>：用于量化用户在使用网页时，由于元素的意外移动或新元素的出现，导致页面布局发生偏移的总次数和严重程度，它会根据偏移大小、时间、窗口中的可见比例等生成偏移分数，分数越低则页面视觉稳定性越好<br><br>相信我们也是遇到过的，比如说在页面没有警告的情况下文字移动了或者要点击一个链接\按钮时，链接\按钮移动了，然后就非常不幸的点到了其他东西🥲<br><br>意外移动通常是由于异步加载资源或将 DOM 元素动态添加到现有内容上方的页面而发生的。罪魁祸首可能是异步加载的图像或视频，字体大小的动态调整，或者是动态调整自身大小的第三方广告或小部件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;image.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;描述文字&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 可能是实际尺寸与设置尺寸不同，当图片加载时会导致内容重新布局 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;font-size: 16px;&quot;</span>&gt;</span>这里的文字大小可能会变化。<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 可能是字体文件加载完成前后的字体渲染大小不同\js动态改变字体大小 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;ad-container&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 广告脚本加载 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">&quot;ad-script.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- js文件异步加载，说明解析 html 时不会等待脚本下载和执行完成，而是先继续执行之后的 html 内容，脚本下载后会立即执行，但有可能在文档加载之后 --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;DOMContentLoaded&quot;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> newElement = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">  newElement.<span class="property">textContent</span> = <span class="string">&quot;这是一个新添加的元素&quot;</span>;</span><br><span class="line">  <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(newElement);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 这表示 html 文档的 DOM 内容完全加载和解析之后执行这个函数，它可以创建一个新的 div 元素，并添加其中的文本内容，诶，这个时候可能就会影响页面布局，出现偏移</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="FID-First-Input-Delay"><a href="#FID-First-Input-Delay" class="headerlink" title="FID-First Input Delay"></a>FID-First Input Delay</h3><p><b>首次输入延迟</b>：从用户<b>第一次</b>与页面交互（例如单击链接、点击按钮等）到浏览器实际能够响应该交互的时间<br><br>第一次输入延迟通常发生在第一次内容绘制（FCP）和可持续交互时间（TTI）之间，因为页面已经呈现了一些内容，但还不能可靠地交互，既不包括事件处理本身所花费的时间，也不包括浏览器在运行事件处理程序后更新界面所花时间<br><br>输入延迟是因为浏览器的主线程正忙于做其他事情，一个常见原因是浏览器正忙于解析和执行应用程序加载的大量计算的 JavaScript。通常网页加载和内容渲染由浏览器的主线程完成，这也意味着所有的JavaScript 代码执行、DOM 操作、事件监听和处理都在这个单一的线程上执行，用户与页面上的元素交互时（例如点击按钮或选择下拉菜单），浏览器会将事件添加到事件队列中等待处理，只有当当前任务执行完成后，浏览器才能响应用户的输入操作<br><br>比如说：文本输入框<code>input</code> <code>textarea</code>、选择下拉菜单<code>select</code>、链接<code>a</code> 元素都需要在响应用户交互之前等待主线程上正在进行的任务完成，而它必须等待的时间就此页面上该用户的 FID 值，良好的输入延迟应控制在 100 毫秒或以内，并且一个良好测量阈值应为页面加载的第 75 个百分位数，该阈值也同时适用于移动和桌面设备<br><br><b>哪些算首次输入？</b><br><br>FID 是测量页面加载期间响应度的指标，它只关注不连续操作对应的输入事件，比如点击、轻触和按键。而其他滚动或是缩放之类的交互属于连续操作，不算做 FID 而且浏览器通常能通过在单独线程上执行这些操作来隐藏延迟<br><br>换句话说，FID 侧重于RAL性能模型中的 R（响应），而滚动、缩放更类似于 A（动画）😘<br><br><b>如果用户迟迟没有与网站进行交互？</b><br><br>顺便一提，不是所有用户都会在访问网站时进行即时交互，也并不是所有交互都和 FID 有关。此外，一些用户可能在主线程很繁忙时交互，则 FID 值较高，如若过了一会&#x2F;很久才交互，此时主线程空闲则 FID 值较低甚至没有<br><br>可以尝试减少JS执行时间、减少数据请求、传输等降低主线程工作量</p>
+<h3 id="TBT-Total-Block-Time"><a href="#TBT-Total-Block-Time" class="headerlink" title="TBT-Total Block Time"></a>TBT-Total Block Time</h3><p><b>总阻塞时间</b>：用于衡量在页面的首次内容绘制 FCP 和可交互时间 TTI 之间，主线程因执行长时间运行的任务（长任务）而被阻塞的总时间。长任务是指那些运行时间超过50毫秒的任务，因为这样的任务可能会延迟页面的响应，影响用户体验<br><br>BT的计算方式是将FCP到TTI之间所有超过50毫秒的长任务的阻塞部分累加起来。如果一个任务执行了90毫秒，那么它的阻塞时间是40毫秒,TBT就是所有这样的阻塞时间的总和<br><br>为避免过长的 TBT ，可以尝试将长任务拆分为小块，进一步组件化，（看到说可以用Web Workers来处理长任务，但是还没看这是啥，TBT的得分越低越好，理想的TBT得分应该低于200毫秒，这表示页面在FCP之后能够快速响应用户交互。如果TBT得分在200-600毫秒之间，表明页面响应性需要改进；而超过600毫秒则表明页面响应性较差，需要优化</p>
+<h3 id="TTI-Time-To-Interactive"><a href="#TTI-Time-To-Interactive" class="headerlink" title="TTI-Time To Interactive"></a>TTI-Time To Interactive</h3><p><b>可持续交互时间</b>：用于衡量页面从开始加载到用户可以与页面进行有效交互所需的时间，关注的是页面的响应性和交互性，它反映了用户首次能够与页面元素进行交互并且页面能够快速（在50毫秒内）响应用户输入的时间点<br><br>完全达到可交互状态的时间点是在最后一个长任务完成的时间，那就意味着 TTI包括首次内容绘制+主线程空闲时间（50ms内没有执行长任务所产生的空闲时间），通常在 0-2.5 秒内属于比较快，超过 4 秒属于比较慢，</p>
+<h3 id="FPS-Frames-Per-Second"><a href="#FPS-Frames-Per-Second" class="headerlink" title="FPS-Frames Per Second"></a>FPS-Frames Per Second</h3><p><b>每秒绘制帧数</b><br><br>重新绘制可能需要重新计算样式、布局和绘制，如果每帧绘制到屏幕的时间在 16.7 ms 以上，每秒绘制的帧数就会小于 60 帧，人眼就能感受到页面出现卡顿（特意做成卡顿效果的另说<br><br>如果将鼠标移到某个页面元素上会触发执行 JavaScript 来更新页面，这可能会触发回流和重绘，ta需要在帧中完成，如果浏览器处理帧的时间过长，将会出现卡顿现象，再比如，如果在滚动页面时会触发很多复杂的页面更新，并且浏览器无法保持可接受的帧率，那么滚动页面时会显得迟缓或卡顿，那阻塞就来了<br><br>可以使用性能成本低的 CSS 属性修改<code>opacity</code>就不会触发重新布局，可以减少绘制时间<br><br>除此之外，还有TTFB 接收第一字节的时间（Time to First Byte），这个时间段内包括 DNS 查找、TCP 连接和 SSL 连接；SI 页面内容填充速度（Speed Index）<br><br>（没有想到还有这种指标，意料之外情理之中，感觉在数媒的动画、游戏、视频里面更常见一点呢🤨）<br><br>另外这俩就不多说了</p>
+<h3 id="Web-Vitals-核心网页指标"><a href="#Web-Vitals-核心网页指标" class="headerlink" title="Web Vitals-核心网页指标"></a>Web Vitals-核心网页指标</h3><p>Google 在 2020 年 5 月 5 日提出了新的用户体验量化方式 Web Vitals 来衡量网站的用户体验，并将这些衡量结果用作其排名算法的一部分。过去要衡量一个网站的好坏，需要使用的指标太多了。在 Web Vitals 中，Google 确定了三个主要衡量指标：</p>
+<li>加载性能（LCP） — 显示最大内容元素所需时间
+<li>交互性（FID） — 首次输入延迟时间
+<li>视觉稳定性（CLS） — 累积布局配置偏移
+（使用`web-vitals`库 / 浏览器插件`web vitals` 测量Web Vitals？）
+
+<h3 id="RAIL-性能模型"><a href="#RAIL-性能模型" class="headerlink" title="RAIL 性能模型"></a>RAIL 性能模型</h3><p><br>是 Response, Animation, Idle, 和 Load的首字母缩写, 是一种由 Google Chrome 团队于 2015 年提出的性能模型, 用于提升浏览器内的用户体验和性能。RAIL 模型的理念是“以用户为中心”<br><br><li><b>响应</b>：应在 100ms 内响应用户，为保证 100ms 内响应，需要在 50ms 内处理用户输入按键<br><br><li><b>动画</b>：从技术上来说，在展示动画的时候，每一帧应该以 16ms 进行渲染，这样可以保持动画效果的一致性。但是浏览器需要大约 6 毫秒来渲染一帧，所以目标上得在10 毫秒或更短的时间内生成动画的每一帧<br><br><li><b>空闲</b>：当执行长任务时，应该把主线程的任务划分到执行时间小于 50ms 的片段中去，这样可以释放线程以进行用户交互<br><br><li><b>加载</b>：根据用户的设备和网络能力优化相关的快速加载性能。目前对于网速快的电脑设备，应该在小于 1s-2s 的时间内加载完成网站，并可以进行用户交互</p>
+<h2 id="观测法"><a href="#观测法" class="headerlink" title="观测法"></a>观测法</h2><h3 id="Chrome-DevTools"><a href="#Chrome-DevTools" class="headerlink" title="Chrome DevTools"></a>Chrome DevTools</h3><p>随着网页性能优化实践的深入，一些标准化的性能指标逐渐形成，如 Google 的 Lighthouse 等工具的推出，它们提供了一套系统化的性能测试和评分机制</p>
+<p><br>是一组内置于 Google Chrome 浏览器中的开发人员工具，用于帮助开发者调试和优化网页，显而易见，在谷歌浏览器中使用，其中的<code>Lighthouse</code>和<code>Performance</code>可以有效帮我们进行性能分析<br><br><code>Lighthouse</code>:生成整个的性能分析报告，并且给予相关优化意见，也可以运用于部分页面运行时数据<br><code>Performance</code>:分析运行时的数据报告，包含阻塞、重排等细节信息<br><br><b>Lighthouse的本地使用</b>:<br><code>Nodejs 12.x</code>版本起支持，可以直接安装<code>lighthouse</code>在本地:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm i -g lighthouse </span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Lighthouse URL地址 --&gt;</span></span><br><span class="line">Lighthouse http://192.168.1.8:5173/</span><br></pre></td></tr></table></figure>
+
+<p><br>就会在项目文件夹中生成一个 html 文件，查看文档可以了🤗<br><br>报告的四个打分指标大概是</p>
+<li>Performance - 性能测试，如网页加载速度、响应时间等
+<li>Accessibility - 辅助检测，如网页的可访问性问题，HTML标签优化等（确保所有用户，包括残障人士，都能平等地访问和使用网页内容
+<li>Best Practices - 实践性检测，如网页安全性，如是否开启HTTPS、网页存在的漏洞等（确保用户数据安全和保护网站免受攻击
+<li>SEO - Search Engine Optimisation搜索引擎优化检测，如网页title是否符合搜索引擎的优化标准等（提高网站在搜索引擎中的可见性和排名
+<br>此外，`Lighthouse`会测量一些上述提到的性能能指标：FCP、TBT、SI等（这几个指标的得分根据一定的权重形成`Performance`的得分）并且还会列出具体的导致得分较低原因
+
+<h3 id="react-profiler"><a href="#react-profiler" class="headerlink" title="react profiler"></a>react profiler</h3><p>（简略版思密达😈）<br><br>React 16.5引入了ProfilerDevTools插件，用于收集组件渲染时间，帮助定位性能瓶颈。该工具提供”Profiler”面板，记录并分析每个 commit 的性能数据，包括火焰图和排序图展示组件渲染耗时，以及交互动作追踪，可以通过这些信息深入理解应用的渲染过程，有效提升React应用的性能<br><br>使用需要先在浏览器下载其插件，然后在控制台<code>profiler</code>进行录制、记录操作、查看数据<br><br>React运行分为两个阶段</p>
+<li>Render:遍历组件树，调用每个组件的render返回渲染内容，将当前组件树的虚拟DOM与新的DOM进行比较，计算差异，形成更新计划（DOM的增删修改等
+<li>Commit：根据更新计划对DOM进行修改，同时会触发一些诸如`componentDidMount` `componentDidUpdate`的生命周期方法，并且处理动画和过渡效果，确保其平滑衔接执行
+<br>而 profiler 是在 commit 阶段收集数据
+在左上角条形图中，每一列表示一次commit，颜色越深、条形越高表示耗时越，当前选中的为黑色
+如果 profile 的记录时间很长，渲染次数就会很多，但其中也有很多耗时很短的、不用查看的的数据，此时通过 profiler 一个筛选功能，用它来制定一个时间阀值，之后 profiler 会隐藏所有比这个阀值更快的 commit
+
+<p><img src="/image-6.png" alt="Alt text"></p>
+<p><b>火焰图</b><br>右侧一行一行数据图就是所选中 commit 的信息，图中每一列代表一个 React component ，各列的尺寸和颜色表示这列所代表的 component 及其 children 的渲染时间，列的宽度表示该 component 最近一次渲染所花费的时间（有可能是这一次&#x2F;上一次&#x2F;上上一次…），列的颜色代表在该次 commit 中渲染所花费的时间，黄色耗时长蓝色耗时短，若 commit 没有在这次重新渲染，则该 component 为灰色<br><br>举个例子，上图中所展示的 commit 总共渲染耗时为 18.4 ms，即：Router component 在本次渲染中花费了 18.4 ms，而它所花费的时间大部分在两个 children 上：Nav（8.4 ms）和 Route (7.9 ms)，剩下的时间用于它的其他 children 和它自身的渲染<br><br>当选中一个 component 时，它的具体信息将会展示在右边的数据列，列里会展示该 component 在这次 commit 时的 props 和 state，可以去深入研究这些数据来找出这次 commit 具体做了哪些<br><br>至于为什么叫火焰图，我猜是因为 component 和它的 children 连起来看有一点点像火焰&#x2F;火苗<br><br><b>排序图</b><br><br>同火焰图一样，排序图也会展示你所指定的那一次 commit 的信息，图中每一列都代表了一个 React component ，不同的是排序图是有顺序的，耗时最长的 component 会展示在第一行，并且只会展示在本次 commit 中被触发重绘的 component</p>
+<p><img src="/image-7.png" alt="Alt text"></p>
+<p><br>其实还有<code>Performance API</code>一组可以精确测量和分析运行时性能的 web API，是上述性能指标监控数据的关键来源（看了看没懂，就没写了🥲）</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2024/07/28/npm-yarn-pnpm/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2024-08-18 22:12:04
+            </span>
+            
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title%EF%BC%9A%E9%A1%B5%E9%9D%A2%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87%E5%8F%8A%E5%85%B6%E8%A7%82%E6%B5%8B%E6%B3%95"><span class="toc-text">title：页面性能指标及其观测法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87%E5%8F%8A%E5%85%B6%E8%A7%82%E6%B5%8B%E6%B3%95"><span class="toc-text">页面性能指标及其观测法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="toc-text">基于用户体验的性能指标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LCP-Largest-Contentful-Paint"><span class="toc-text">LCP-Largest Contentful Paint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FCP-First-Contentful-Paint"><span class="toc-text">FCP-First Contentful Paint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CLS-Cumulative-Layout-Shift"><span class="toc-text">CLS-Cumulative Layout Shift</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FID-First-Input-Delay"><span class="toc-text">FID-First Input Delay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TBT-Total-Block-Time"><span class="toc-text">TBT-Total Block Time</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TTI-Time-To-Interactive"><span class="toc-text">TTI-Time To Interactive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FPS-Frames-Per-Second"><span class="toc-text">FPS-Frames Per Second</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web-Vitals-%E6%A0%B8%E5%BF%83%E7%BD%91%E9%A1%B5%E6%8C%87%E6%A0%87"><span class="toc-text">Web Vitals-核心网页指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RAIL-%E6%80%A7%E8%83%BD%E6%A8%A1%E5%9E%8B"><span class="toc-text">RAIL 性能模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%82%E6%B5%8B%E6%B3%95"><span class="toc-text">观测法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Chrome-DevTools"><span class="toc-text">Chrome DevTools</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-profiler"><span class="toc-text">react profiler</span></a></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="github" target="_blank" rel="noopener" href="https://github.com/kuangkuang0326">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/kuangkuang0326">kuangkuang0326</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2024 Oranges</a>
+        
+    </div>
+  
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="Search...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' +  + '&url=' + http%3A%2F%2Fexample.com%2F2024%2F08%2F18%2FPage_performance%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2024/08/18/Page_performance/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
+    </div>
+  </body>
+</html>
